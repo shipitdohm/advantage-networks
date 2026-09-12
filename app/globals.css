@@ -25,10 +25,10 @@
   /* Slightly dimmed accent for large solid-fill surfaces (e.g. the hero
      stats bar), where the full-saturation accent is too intense. */
   --accent-dim: color-mix(in oklch, #2700ff 55%, black);
-  /* Accent with alpha baked in, for blurred glow effects — Tailwind can't
+  /* White with alpha baked in, for blurred glow effects — Tailwind can't
      apply its /opacity modifier to a var()-based color, so the alpha has
      to live in the variable itself, same pattern as --accent-soft. */
-  --accent-glow: rgb(39 0 255 / 18%);
+  --glow: rgb(255 255 255 / 18%);
 
   --success: oklch(68% 0.15 150);
   --warning: #f5a623;

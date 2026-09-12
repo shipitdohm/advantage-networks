@@ -48,7 +48,7 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-4xl">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-6 -z-10 rounded-card bg-accent-glow blur-2xl"
+            className="pointer-events-none absolute -inset-6 -z-10 rounded-card bg-glow blur-2xl"
           />
           <div className="relative rounded-card border border-border-strong bg-bg px-6 py-8 md:px-10 md:py-10">
           <dl
