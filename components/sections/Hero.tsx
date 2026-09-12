@@ -50,7 +50,12 @@ export function Hero() {
             <div key={stat.label}>
               <dt className="sr-only">{stat.label}</dt>
               <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
-                <CountUp target={stat.target} suffix={stat.suffix} />
+                <CountUp
+                  target={stat.target}
+                  suffix={stat.suffix}
+                  startValue={stat.startValue}
+                  formatThousands={stat.formatThousands}
+                />
               </dd>
               <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
             </div>

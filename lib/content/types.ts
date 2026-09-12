@@ -10,6 +10,10 @@ export interface Stat {
   prefix?: string;
   suffix?: string;
   label: string;
+  /** Animate from this value instead of 0 — e.g. a higher number counting down to `target`. */
+  startValue?: number;
+  /** Once the animating value reaches 1000+, display it divided by 1000 with a "K" appended. */
+  formatThousands?: boolean;
 }
 
 export interface WhatWeDoPoint {

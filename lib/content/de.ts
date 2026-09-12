@@ -30,10 +30,10 @@ export const de: Dictionary = {
     ctaPrimary: "Zum Shop",
     ctaSecondary: "Zugang beantragen",
     stats: [
-      { target: 3, suffix: "+", label: "Partner-Communities" },
-      { target: 1, suffix: "K+", label: "Produkte im Sortiment" },
-      { target: 500, suffix: "+", label: "Aktive Netzwerk-Knoten" },
       { target: 100, suffix: "+", label: "Erfolgreiche Aktivierungen" },
+      { target: 500, suffix: "+", label: "Eigene Netzwerk-Knoten" },
+      { target: 3, suffix: "+", label: "Partner-Communities", startValue: 9 },
+      { target: 1000, suffix: "+", label: "Produkte im Sortiment", formatThousands: true },
     ],
   },
   whatWeDo: {

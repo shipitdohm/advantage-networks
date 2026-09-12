@@ -30,10 +30,10 @@ export const en: Dictionary = {
     ctaPrimary: "Enter the Shop",
     ctaSecondary: "Request Access",
     stats: [
-      { target: 3, suffix: "+", label: "Partner communities" },
-      { target: 1, suffix: "K+", label: "Products in range" },
-      { target: 500, suffix: "+", label: "Active network nodes" },
       { target: 100, suffix: "+", label: "Successful activations" },
+      { target: 500, suffix: "+", label: "Own network nodes" },
+      { target: 3, suffix: "+", label: "Partner communities", startValue: 9 },
+      { target: 1000, suffix: "+", label: "Products in range", formatThousands: true },
     ],
   },
   whatWeDo: {
