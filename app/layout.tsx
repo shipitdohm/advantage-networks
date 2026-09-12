@@ -14,9 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Advantage Networks — Private-network distribution for consumer electronics",
+  title: "Advantage Networks — Elevate your Connectivity",
   description:
     "Advantage Networks distributes consumer electronics exclusively through private, invite-only member networks.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
