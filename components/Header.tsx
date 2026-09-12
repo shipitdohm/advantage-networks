@@ -72,22 +72,12 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
+      <div className="container-content pt-3 md:pt-4">
       <div
-        aria-hidden="true"
-        className={`pointer-events-none absolute inset-x-0 top-0 h-32 transition-opacity duration-500 md:h-40 ${
-          scrolled ? "opacity-100" : "opacity-0"
+        className={`liquid-glass relative flex h-14 items-center justify-between rounded-pill px-4 md:h-16 md:px-6 ${
+          scrolled ? "liquid-glass-scrolled" : ""
         }`}
-        style={{
-          background:
-            "linear-gradient(to bottom, oklch(13% 0.014 260 / 78%) 0%, oklch(13% 0.014 260 / 38%) 50%, transparent 100%)",
-          backdropFilter: "blur(16px)",
-          WebkitBackdropFilter: "blur(16px)",
-          maskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
-        }}
-      />
-
-      <div className="container-content relative flex h-16 items-center justify-between md:h-20">
+      >
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- static SVG mark, no optimization needed */}
           <img src="/brand/logo/IconWhite.svg" alt="Advantage Networks" className="h-7 w-auto" />
@@ -233,8 +223,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="rounded-b-card bg-surface/95 shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)] backdrop-blur-md md:hidden">
-          <nav className="container-content flex flex-col gap-1 py-4">
+        <div className="liquid-glass mt-2 rounded-card md:hidden">
+          <nav className="flex flex-col gap-1 px-4 py-4">
             {t.nav.links.map((link) => (
               <Link
                 key={link.href}
@@ -277,6 +267,7 @@ export function Header() {
           </nav>
         </div>
       )}
+      </div>
     </header>
   );
 }
