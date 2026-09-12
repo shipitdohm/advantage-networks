@@ -24,7 +24,7 @@
   --accent-soft-2: rgb(39 0 255 / 7%);
   /* Slightly dimmed accent for large solid-fill surfaces (e.g. the hero
      stats bar), where the full-saturation accent is too intense. */
-  --accent-dim: color-mix(in oklch, #2700ff 88%, black);
+  --accent-dim: color-mix(in oklch, #2700ff 55%, black);
 
   --success: oklch(68% 0.15 150);
   --warning: #f5a623;
