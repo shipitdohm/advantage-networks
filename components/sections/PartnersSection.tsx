@@ -53,12 +53,18 @@ export function PartnersSection() {
   const track = [...t.partners.names, ...t.partners.names];
 
   return (
-    <section
-      className="border-y border-border-hairline py-8 md:py-10"
-      data-od-id="partners"
-      aria-label={t.partners.heading}
-    >
-      <Reveal>
+    <section className="py-20 md:py-28" data-od-id="partners">
+      <div className="container-content">
+        <Reveal className="max-w-2xl">
+          <span className="eyebrow">{t.partners.eyebrow}</span>
+          <h2 className="mt-4 font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
+            {t.partners.heading}
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted">{t.partners.intro}</p>
+        </Reveal>
+      </div>
+
+      <Reveal delayMs={100} className="mt-14 border-y border-border-hairline py-8 md:py-10">
         <div
           className="relative w-full overflow-hidden"
           style={{
