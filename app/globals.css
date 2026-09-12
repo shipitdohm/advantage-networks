@@ -28,7 +28,7 @@
   /* Accent with alpha baked in, for blurred glow effects — Tailwind can't
      apply its /opacity modifier to a var()-based color, so the alpha has
      to live in the variable itself, same pattern as --accent-soft. */
-  --accent-glow: rgb(39 0 255 / 55%);
+  --accent-glow: rgb(39 0 255 / 32%);
 
   --success: oklch(68% 0.15 150);
   --warning: #f5a623;
