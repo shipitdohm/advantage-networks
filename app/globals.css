@@ -167,6 +167,15 @@ body {
     background-size: 64px 64px;
   }
 
+  /* Same pattern as .grid-texture, scaled down for small contained
+     surfaces (e.g. the hero stats box) — at 64px, only 2-3 cells fit in a
+     short box and the grid reads as oversized/chunky instead of a texture. */
+  .grid-texture-sm {
+    background-image: linear-gradient(to right, oklch(100% 0 0 / 6%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(100% 0 0 / 6%) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+
   /* Restrained grain — a single subtle texture layer, not a slop gradient.
    * A barely-there noise overlay keeps flat dark surfaces from feeling
    * sterile. Kept faint, screen blend so it lifts rather than muddies. */

@@ -47,7 +47,7 @@ export function Hero() {
       <Reveal className="container-content relative pb-24 pt-4 md:pb-32" data-od-id="hero-stats-bar">
         <div className="relative mx-auto w-full max-w-4xl">
           <div className="relative overflow-hidden rounded-card border border-border-strong bg-bg px-6 py-8 md:px-10 md:py-10">
-            <div aria-hidden="true" className="grid-texture pointer-events-none absolute inset-0 opacity-40" />
+            <div aria-hidden="true" className="grid-texture-sm pointer-events-none absolute inset-0 opacity-40" />
             <div
               aria-hidden="true"
               className="animate-pulse-soft pointer-events-none absolute inset-0 rounded-card border border-accent"
