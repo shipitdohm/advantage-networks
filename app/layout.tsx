@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 import { SmoothScrollProvider } from "@/lib/scroll/SmoothScrollProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { TabTitleMarquee } from "@/components/TabTitleMarquee";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable}>
       <body className="grain relative font-body antialiased">
+        <TabTitleMarquee />
         <LanguageProvider>
           <SmoothScrollProvider>
             <div className="flex min-h-screen flex-col">
