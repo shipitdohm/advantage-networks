@@ -110,27 +110,27 @@ body {
     transform: translateY(0);
   }
 
-  /* Apple "Liquid Glass"-inspired material: a translucent, saturated blur
-     with a bright inset top edge (simulated refraction highlight) and a
-     soft glare in the upper-left, rather than a flat blurred panel. SVG
-     feDisplacementMap-based true refraction was deliberately left out —
-     it only renders in Chromium and silently no-ops elsewhere, which isn't
-     worth the complexity for a header that must look right everywhere. */
+  /* Apple "Liquid Glass"-inspired material. Per Apple's own HIG reference
+     shots (developer.apple.com/design/human-interface-guidelines/materials),
+     the regular (dark-background) variant reads as a darkened, blurred
+     window onto what's behind it — not a lightened/milky panel — with only
+     a faint edge, not a bright white ring. Tuned down accordingly: a flat
+     dark translucent fill (no lightening gradient), a hairline border, and
+     a much softer top highlight. SVG feDisplacementMap-based true
+     refraction was deliberately left out — it only renders in Chromium and
+     silently no-ops elsewhere, which isn't worth it for a header that must
+     look right everywhere. */
   .liquid-glass {
     position: relative;
     isolation: isolate;
-    background: linear-gradient(
-      180deg,
-      oklch(28% 0.02 260 / 55%) 0%,
-      oklch(15% 0.016 260 / 42%) 100%
-    );
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid oklch(100% 0 0 / 14%);
+    background: oklch(19% 0.016 260 / 40%);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid oklch(100% 0 0 / 8%);
     box-shadow:
       0 16px 40px -16px rgba(0, 0, 0, 0.55),
-      inset 0 1px 0 oklch(100% 0 0 / 24%),
-      inset 0 -1px 0 oklch(0% 0 0 / 20%);
+      inset 0 1px 0 oklch(100% 0 0 / 10%),
+      inset 0 -1px 0 oklch(0% 0 0 / 25%);
     transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
   }
 
@@ -141,19 +141,15 @@ body {
     z-index: -1;
     border-radius: inherit;
     pointer-events: none;
-    background: radial-gradient(120% 140% at 18% -30%, oklch(100% 0 0 / 40%), transparent 55%);
+    background: radial-gradient(120% 140% at 18% -30%, oklch(100% 0 0 / 16%), transparent 55%);
     mix-blend-mode: overlay;
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   .liquid-glass-scrolled {
-    background: linear-gradient(
-      180deg,
-      oklch(30% 0.02 260 / 72%) 0%,
-      oklch(15% 0.016 260 / 62%) 100%
-    );
-    backdrop-filter: blur(26px) saturate(190%);
-    -webkit-backdrop-filter: blur(26px) saturate(190%);
+    background: oklch(19% 0.016 260 / 58%);
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
   }
 
   .grid-texture {
