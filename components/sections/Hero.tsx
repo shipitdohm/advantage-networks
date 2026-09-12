@@ -44,8 +44,8 @@ export function Hero() {
         </div>
       </div>
 
-      <Reveal className="container-content relative pb-24 pt-4 md:pb-32">
-        <div className="liquid-glass mx-auto w-full max-w-4xl rounded-card px-6 py-8 md:px-10 md:py-10">
+      <Reveal className="relative mt-12 w-full bg-accent py-8 md:mt-16 md:py-10" data-od-id="hero-stats-bar">
+        <div className="container-content">
           <dl
             className="grid grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
             data-od-id="hero-stats"
@@ -53,7 +53,7 @@ export function Hero() {
             {t.hero.stats.map((stat) => (
               <div key={stat.label}>
                 <dt className="sr-only">{stat.label}</dt>
-                <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
+                <dd className="font-display text-xl font-medium tracking-[-0.02em] text-accent-on sm:text-3xl md:text-5xl">
                   <CountUp
                     target={stat.target}
                     suffix={stat.suffix}
@@ -61,7 +61,7 @@ export function Hero() {
                     formatThousands={stat.formatThousands}
                   />
                 </dd>
-                <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
+                <p className="mt-2 text-[10px] text-accent-on/70 sm:text-xs">{stat.label}</p>
               </div>
             ))}
           </dl>
