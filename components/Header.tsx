@@ -74,7 +74,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="container-content pt-3 md:pt-4">
       <div
-        className={`liquid-glass relative flex h-12 items-center justify-between rounded-pill px-4 md:h-14 md:px-6 ${
+        className={`liquid-glass relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 md:h-14 md:pl-6 md:pr-1.5 ${
           scrolled ? "liquid-glass-scrolled" : ""
         }`}
       >
