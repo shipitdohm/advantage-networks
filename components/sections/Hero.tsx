@@ -4,18 +4,19 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { FabricWaves } from "@/components/FabricWaves";
 import { CountUp } from "@/components/CountUp";
+import { Reveal } from "@/components/Reveal";
 
 export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden" data-od-id="hero">
+    <section className="relative overflow-hidden" data-od-id="hero">
       <div className="pointer-events-none absolute inset-0">
         <FabricWaves className="absolute inset-0 h-full w-full" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
-      <div className="container-content relative flex flex-col items-center py-20 text-center">
+      <div className="container-content relative flex min-h-screen flex-col items-center justify-center py-20 text-center">
         <h1
           className="max-w-2xl text-balance font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.03em] text-fg md:text-7xl"
           data-od-id="hero-headline"
@@ -41,9 +42,11 @@ export function Hero() {
             {t.hero.ctaSecondary}
           </a>
         </div>
+      </div>
 
+      <Reveal className="container-content relative pb-24 pt-4 md:pb-32">
         <dl
-          className="mt-16 grid w-full max-w-4xl grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
+          className="mx-auto grid w-full max-w-4xl grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
           data-od-id="hero-stats"
         >
           {t.hero.stats.map((stat) => (
@@ -61,7 +64,7 @@ export function Hero() {
             </div>
           ))}
         </dl>
-      </div>
+      </Reveal>
     </section>
   );
 }
