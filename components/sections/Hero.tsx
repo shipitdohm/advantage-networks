@@ -45,25 +45,27 @@ export function Hero() {
       </div>
 
       <Reveal className="container-content relative pb-24 pt-4 md:pb-32">
-        <dl
-          className="mx-auto grid w-full max-w-4xl grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
-          data-od-id="hero-stats"
-        >
-          {t.hero.stats.map((stat) => (
-            <div key={stat.label}>
-              <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
-                <CountUp
-                  target={stat.target}
-                  suffix={stat.suffix}
-                  startValue={stat.startValue}
-                  formatThousands={stat.formatThousands}
-                />
-              </dd>
-              <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
-            </div>
-          ))}
-        </dl>
+        <div className="liquid-glass mx-auto w-full max-w-4xl rounded-card px-6 py-8 md:px-10 md:py-10">
+          <dl
+            className="grid grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
+            data-od-id="hero-stats"
+          >
+            {t.hero.stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
+                  <CountUp
+                    target={stat.target}
+                    suffix={stat.suffix}
+                    startValue={stat.startValue}
+                    formatThousands={stat.formatThousands}
+                  />
+                </dd>
+                <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
+              </div>
+            ))}
+          </dl>
+        </div>
       </Reveal>
     </section>
   );
