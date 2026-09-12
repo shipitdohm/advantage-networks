@@ -53,56 +53,50 @@ export function PartnersSection() {
   const track = [...t.partners.names, ...t.partners.names];
 
   return (
-    <section className="py-20 md:py-28" data-od-id="partners">
-      <div className="container-content">
-        <Reveal className="max-w-2xl">
-          <span className="eyebrow">{t.partners.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
-            {t.partners.heading}
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted">{t.partners.intro}</p>
-        </Reveal>
-
-        <Reveal delayMs={100} className="mt-14">
-          <div
-            className="relative w-full overflow-hidden"
-            style={{
-              maskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-              WebkitMaskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-            }}
-          >
-            <div className="marquee-track flex w-max items-center gap-16 md:gap-24">
-              {track.map((name, i) => {
-                const file = LOGO_FILES[name];
-                const url = BRAND_URLS[name];
-                return (
-                  <a
-                    key={`${name}-${i}`}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={name}
-                    className="flex h-8 flex-none items-center md:h-9"
-                  >
-                    {file ? (
-                      // eslint-disable-next-line @next/next/no-img-element -- brand SVG, no optimization needed
-                      <img
-                        src={`/brand/partners/${file}`}
-                        alt={name}
-                        className="partner-logo h-full w-auto object-contain"
-                      />
-                    ) : (
-                      <span className="font-display text-2xl font-medium tracking-tight text-muted transition-colors hover:text-fg md:text-3xl">
-                        {name}
-                      </span>
-                    )}
-                  </a>
-                );
-              })}
-            </div>
+    <section
+      className="border-y border-border-hairline py-8 md:py-10"
+      data-od-id="partners"
+      aria-label={t.partners.heading}
+    >
+      <Reveal>
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+          }}
+        >
+          <div className="marquee-track flex w-max items-center gap-16 md:gap-24">
+            {track.map((name, i) => {
+              const file = LOGO_FILES[name];
+              const url = BRAND_URLS[name];
+              return (
+                <a
+                  key={`${name}-${i}`}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  className="flex h-7 flex-none items-center md:h-8"
+                >
+                  {file ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- brand SVG, no optimization needed
+                    <img
+                      src={`/brand/partners/${file}`}
+                      alt={name}
+                      className="partner-logo h-full w-auto object-contain"
+                    />
+                  ) : (
+                    <span className="font-display text-xl font-medium tracking-tight text-muted transition-colors hover:text-fg md:text-2xl">
+                      {name}
+                    </span>
+                  )}
+                </a>
+              );
+            })}
           </div>
-        </Reveal>
-      </div>
+        </div>
+      </Reveal>
     </section>
   );
 }
