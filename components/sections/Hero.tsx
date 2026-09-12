@@ -44,14 +44,17 @@ export function Hero() {
         </div>
       </div>
 
-      <Reveal className="relative mt-12 w-full bg-accent py-8 md:mt-16 md:py-10" data-od-id="hero-stats-bar">
+      <Reveal className="relative mt-12 w-full bg-accent-dim py-8 md:mt-16 md:py-10" data-od-id="hero-stats-bar">
         <div className="container-content">
           <dl
-            className="grid grid-cols-4 gap-x-5 gap-y-8 sm:gap-x-8 md:gap-x-10"
+            className="grid grid-cols-4 gap-x-5 gap-y-8 text-center sm:gap-x-8 md:gap-x-10"
             data-od-id="hero-stats"
           >
             {t.hero.stats.map((stat) => (
-              <div key={stat.label}>
+              <div
+                key={stat.label}
+                className="transition-transform duration-200 ease-out hover:-translate-y-0.5"
+              >
                 <dt className="sr-only">{stat.label}</dt>
                 <dd className="font-display text-xl font-medium tracking-[-0.02em] text-accent-on sm:text-3xl md:text-5xl">
                   <CountUp

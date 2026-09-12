@@ -19,6 +19,7 @@ const config: Config = {
         "accent-active": "var(--accent-active)",
         "accent-soft": "var(--accent-soft)",
         "accent-soft-2": "var(--accent-soft-2)",
+        "accent-dim": "var(--accent-dim)",
         success: "var(--success)",
         warn: "var(--warn)",
         danger: "var(--danger)",
