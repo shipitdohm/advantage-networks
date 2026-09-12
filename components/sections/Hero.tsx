@@ -45,7 +45,12 @@ export function Hero() {
       </div>
 
       <Reveal className="container-content relative pb-24 pt-4 md:pb-32" data-od-id="hero-stats-bar">
-        <div className="mx-auto w-full max-w-4xl rounded-card border border-border-strong bg-surface px-6 py-8 md:px-10 md:py-10">
+        <div className="relative mx-auto w-full max-w-4xl">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-12 -z-10 rounded-card bg-accent-glow blur-3xl"
+          />
+          <div className="relative rounded-card border border-border-strong bg-bg px-6 py-8 md:px-10 md:py-10">
           <dl
             className="grid grid-cols-4 gap-x-5 gap-y-8 text-center sm:gap-x-8 md:gap-x-10"
             data-od-id="hero-stats"
@@ -68,6 +73,7 @@ export function Hero() {
               </div>
             ))}
           </dl>
+          </div>
         </div>
       </Reveal>
     </section>
