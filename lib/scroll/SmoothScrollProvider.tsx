@@ -13,10 +13,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const lenis = new Lenis({
-      duration: 0.7,
-      easing: (t: number) => 1 - Math.pow(1 - t, 2),
-      lerp: 0.16,
-      wheelMultiplier: 1,
+      lerp: 0.3,
+      wheelMultiplier: 1.5,
       touchMultiplier: 1.1,
     });
 

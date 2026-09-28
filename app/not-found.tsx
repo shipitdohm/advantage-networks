@@ -14,8 +14,7 @@ export default function NotFound() {
       </div>
 
       <div className="container-content relative text-center">
-        <span className="eyebrow">{t.notFoundPage.eyebrow}</span>
-        <h1 className="mx-auto mt-5 max-w-xl font-display text-4xl font-medium tracking-[-0.02em] text-fg md:text-5xl">
+        <h1 className="mx-auto max-w-xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
           {t.notFoundPage.heading}
         </h1>
         <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-muted">{t.notFoundPage.body}</p>

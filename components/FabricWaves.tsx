@@ -46,10 +46,13 @@ export function FabricWaves({ className = "" }: { className?: string }) {
     // than the last — a cheap fractal-noise stand-in that reads as an
     // organic, cratered surface rather than a couple of clean wave bands.
     const OCTAVES = [
-      { fx: 0.0014, fy: 0.0011, speed: 0.4, phase: 0.0, amp: 1.0 },
-      { fx: 0.0032, fy: -0.0027, speed: 0.65, phase: 1.7, amp: 0.55 },
-      { fx: -0.0061, fy: 0.0052, speed: 0.9, phase: 3.4, amp: 0.3 },
-      { fx: 0.0115, fy: 0.0098, speed: 1.2, phase: 5.1, amp: 0.16 },
+      // Even the lowest octave spans more than one full wavelength across a
+      // typical viewport, so a crest is always somewhere on screen — with
+      // lower frequencies the whole field could sit in a trough and go dark.
+      { fx: 0.0056, fy: 0.0044, speed: 0.4, phase: 0.0, amp: 1.0 },
+      { fx: 0.0085, fy: -0.0072, speed: 0.65, phase: 1.7, amp: 0.55 },
+      { fx: -0.0125, fy: 0.0105, speed: 0.9, phase: 3.4, amp: 0.3 },
+      { fx: 0.0185, fy: 0.0155, speed: 1.2, phase: 5.1, amp: 0.16 },
     ];
     const AMP_SUM = OCTAVES.reduce((s, o) => s + o.amp, 0);
 
@@ -99,7 +102,7 @@ export function FabricWaves({ className = "" }: { className?: string }) {
     } else {
       let start = performance.now();
       function loop(now: number) {
-        const t = ((now - start) / 1000) * 0.3;
+        const t = ((now - start) / 1000) * 0.5;
         draw(t);
         raf = requestAnimationFrame(loop);
       }

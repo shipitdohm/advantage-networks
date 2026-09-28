@@ -21,8 +21,7 @@ export default function AboutPage() {
     <>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24" data-od-id="about-hero">
         <div className="container-content">
-          <span className="eyebrow">{t.aboutPage.eyebrow}</span>
-          <h1 className="mt-5 max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
+          <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
             {t.aboutPage.heading}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{t.aboutPage.intro}</p>
@@ -65,8 +64,7 @@ export default function AboutPage() {
 
       <section className="pb-16 md:pb-24" data-od-id="about-team">
         <div className="container-content">
-          <span className="eyebrow">{t.aboutPage.team.eyebrow}</span>
-          <h2 className="mt-4 max-w-xl font-display text-2xl font-medium tracking-[-0.01em] text-fg md:text-3xl">
+          <h2 className="max-w-xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {t.aboutPage.team.heading}
           </h2>
 
@@ -108,8 +106,7 @@ export default function AboutPage() {
 
       <section className="pb-24 md:pb-32" data-od-id="about-locations">
         <div className="container-content">
-          <span className="eyebrow">{t.aboutPage.locations.eyebrow}</span>
-          <h2 className="mt-4 max-w-xl font-display text-2xl font-medium tracking-[-0.01em] text-fg md:text-3xl">
+          <h2 className="max-w-xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {t.aboutPage.locations.heading}
           </h2>
 

@@ -82,8 +82,7 @@ export default function ConsultingPage() {
     <>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24" data-od-id="consulting-hero">
         <div className="container-content">
-          <span className="eyebrow">{c.eyebrow}</span>
-          <h1 className="mt-5 max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
+          <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
             {c.heading}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{c.intro}</p>
@@ -113,8 +112,7 @@ export default function ConsultingPage() {
 
           <Reveal delayMs={100} className="mt-14 border-t border-border pt-14 md:mt-16 md:pt-16">
             <div className="max-w-2xl text-center md:mx-auto">
-              <span className="eyebrow">{c.collaboration.eyebrow}</span>
-              <h3 className="mt-4 font-display text-xl font-medium tracking-[-0.01em] text-fg md:text-2xl">
+              <h3 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
                 {c.collaboration.heading}
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">{c.collaboration.intro}</p>
@@ -152,8 +150,7 @@ export default function ConsultingPage() {
           </Reveal>
 
           <Reveal delayMs={120} className="mt-14 border-t border-border pt-14 md:mt-16 md:pt-16">
-            <span className="eyebrow">{c.caseStudies.eyebrow}</span>
-            <h3 className="mt-4 font-display text-xl font-medium tracking-[-0.01em] text-fg md:text-2xl">
+            <h3 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
               {c.caseStudies.heading}
             </h3>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{c.note}</p>

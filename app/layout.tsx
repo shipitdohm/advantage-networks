@@ -5,6 +5,7 @@ import { SmoothScrollProvider } from "@/lib/scroll/SmoothScrollProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TabTitleMarquee } from "@/components/TabTitleMarquee";
+import { FabricWaves } from "@/components/FabricWaves";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,6 +45,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de" className={inter.variable}>
       <body className="grain relative font-body antialiased">
         <TabTitleMarquee />
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+          <FabricWaves className="absolute inset-0 h-full w-full" />
+        </div>
         <LanguageProvider>
           <SmoothScrollProvider>
             <div className="flex min-h-screen flex-col">

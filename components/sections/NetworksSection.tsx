@@ -12,8 +12,7 @@ export function NetworksSection() {
       <div className="container-content">
         <Reveal className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="eyebrow">{t.networks.eyebrow}</span>
-            <h2 className="mt-4 max-w-xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
+            <h2 className="max-w-xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
               {t.networks.heading}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">{t.networks.intro}</p>

@@ -24,8 +24,7 @@ export default function ContactPage() {
     <>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24" data-od-id="contact-hero">
         <div className="container-content">
-          <span className="eyebrow">{t.contactPage.eyebrow}</span>
-          <h1 className="mt-5 max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
+          <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
             {t.contactPage.heading}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{t.contactPage.intro}</p>

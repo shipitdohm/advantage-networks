@@ -90,8 +90,7 @@ export default function PrivacyPage() {
   return (
     <section className="py-20 md:py-28">
       <div className="container-content">
-        <span className="eyebrow">{c.eyebrow}</span>
-        <h1 className="mt-5 font-display text-4xl font-medium tracking-[-0.02em] text-fg md:text-5xl">
+        <h1 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
           {c.heading}
         </h1>
         <p className="mt-5 max-w-xl rounded-lg border border-border-strong bg-surface px-4 py-3 text-sm text-muted">

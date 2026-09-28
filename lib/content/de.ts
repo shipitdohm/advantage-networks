@@ -20,14 +20,14 @@ export const de: Dictionary = {
       { label: "Kontakt", href: "/contact" },
     ],
     langLabel: "EN",
-    shop: "Betrete deinen Advantage",
+    shop: "Entdecke deinen Advantage",
   },
   hero: {
     eyebrow: "Exklusiver Zugang über private Netzwerke",
     headline: "Your network, your advantage.",
     subheadline:
       "Wir verbinden definierte Communities mit exklusiven Konditionen auf Premium-Technologieprodukte. Exklusiv, smart, skalierbar.",
-    ctaPrimary: "Betrete deinen Advantage",
+    ctaPrimary: "Entdecke deinen Advantage",
     ctaSecondary: "Zugang beantragen",
     stats: [
       { target: 100, suffix: "+", label: "Erfolgreiche Aktivierungen" },
@@ -40,7 +40,7 @@ export const de: Dictionary = {
     eyebrow: "Was wir machen",
     heading: "Wir verwandeln private Communities in echte Vorteile.",
     summary:
-      "Advantage Networks arbeitet mit Elektronikmarken zusammen und verkauft exklusiv innerhalb geschlossener, Login-geschützter Mitglieder-Netzwerke — Preise gelangen so nie in öffentliche Vergleichsportale.",
+      "Advantage Networks arbeitet mit Elektronikmarken zusammen und verkauft exklusiv innerhalb geschlossener, Login-geschützter Mitglieder-Netzwerke.",
     points: [
       {
         title: "Exklusive Konditionen",

@@ -40,7 +40,7 @@ export const en: Dictionary = {
     eyebrow: "What we do",
     heading: "We turn private communities into real advantages.",
     summary:
-      "Advantage Networks partners with electronics brands to sell exclusively inside closed, login-gated member networks — so prices never leak into public comparison sites.",
+      "Advantage Networks partners with electronics brands to sell exclusively inside closed, login-gated member networks.",
     points: [
       {
         title: "Exclusive conditions",

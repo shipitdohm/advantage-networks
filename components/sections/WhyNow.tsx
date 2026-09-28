@@ -10,8 +10,7 @@ export function WhyNow() {
     <section className="bg-surface py-20 md:py-28" data-od-id="why-now">
       <div className="container-content grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <Reveal>
-          <span className="eyebrow">{t.whyNow.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-medium leading-[1.15] tracking-[-0.01em] text-fg md:text-4xl">
+          <h2 className="font-display text-3xl font-medium leading-[1.15] tracking-[-0.01em] text-fg md:text-4xl">
             {t.whyNow.heading}
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted">{t.whyNow.body}</p>

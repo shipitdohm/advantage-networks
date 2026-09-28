@@ -46,8 +46,7 @@ export function WhatWeDo() {
     <section className="py-20 md:py-28" data-od-id="what-we-do">
       <div className="container-content">
         <Reveal>
-          <span className="eyebrow">{t.whatWeDo.eyebrow}</span>
-          <h2 className="mt-4 max-w-2xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
+          <h2 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {t.whatWeDo.heading}
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{t.whatWeDo.summary}</p>

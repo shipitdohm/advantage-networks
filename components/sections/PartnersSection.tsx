@@ -55,8 +55,7 @@ export function PartnersSection() {
     <section className="py-20 md:py-28" data-od-id="partners">
       <div className="container-content">
         <Reveal className="max-w-2xl">
-          <span className="eyebrow">{t.partners.eyebrow}</span>
-          <h2 className="mt-4 font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
+          <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {t.partners.heading}
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted">{t.partners.intro}</p>

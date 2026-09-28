@@ -10,8 +10,7 @@ export function HowItWorks() {
     <section id="how-it-works" className="scroll-mt-20 py-20 md:scroll-mt-24 md:py-28" data-od-id="how-it-works">
       <div className="container-content">
         <Reveal>
-          <span className="eyebrow">{t.howItWorks.eyebrow}</span>
-          <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium tracking-[-0.01em] text-fg md:text-5xl">
+          <h2 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {t.howItWorks.heading}
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">{t.howItWorks.intro}</p>

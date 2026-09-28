@@ -24,8 +24,7 @@ export default function ChannelsPage() {
     <>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24" data-od-id="channels-hero">
         <div className="container-content">
-          <span className="eyebrow">{t.channelsPage.eyebrow}</span>
-          <h1 className="mt-5 max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
+          <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
             {t.channelsPage.heading}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{t.channelsPage.intro}</p>
@@ -49,7 +48,7 @@ export default function ChannelsPage() {
 
         <Reveal className="container-content mt-14 border-t border-border pt-14 md:mt-16 md:pt-16">
           <div className="max-w-xl">
-            <h2 className="font-display text-xl font-medium text-fg md:text-2xl">
+            <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
               {t.channelsPage.suggestChannel.heading}
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">

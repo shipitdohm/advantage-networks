@@ -1,27 +1,80 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { FabricWaves } from "@/components/FabricWaves";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
+
+const START_DELAY_MS = 450;
+const CHAR_DELAY_MS = 65;
+const LINE_PAUSE_MS = 600;
+const CARET_LINGER_MS = 1800;
+
+// Types the headline in like a keyboard: the first clause, a beat, then the
+// second. Every line reserves its full width up front (invisible copy) so
+// nothing shifts while it types, and the full sentence stays in the DOM as
+// screen-reader text.
+function TypedHeadline({ text }: { text: string }) {
+  const split = text.indexOf(", ");
+  const lines = split === -1 ? [text] : [text.slice(0, split + 1), text.slice(split + 2)];
+  const total = lines.reduce((sum, l) => sum + l.length, 0);
+  const firstLen = lines[0].length;
+
+  const [count, setCount] = useState(0);
+  const [caretVisible, setCaretVisible] = useState(true);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(total);
+      setCaretVisible(false);
+      return;
+    }
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    for (let i = 1; i <= total; i++) {
+      const delay = START_DELAY_MS + i * CHAR_DELAY_MS + (i > firstLen ? LINE_PAUSE_MS : 0);
+      timers.push(setTimeout(() => setCount(i), delay));
+    }
+    const endDelay = START_DELAY_MS + total * CHAR_DELAY_MS + LINE_PAUSE_MS + CARET_LINGER_MS;
+    timers.push(setTimeout(() => setCaretVisible(false), endDelay));
+    return () => timers.forEach(clearTimeout);
+  }, [total, firstLen]);
+
+  const caretLine = count <= firstLen ? 0 : 1;
+
+  return (
+    <>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden="true">
+        {lines.map((line, li) => {
+          const typed = li === 0 ? Math.min(count, firstLen) : Math.max(0, count - firstLen);
+          return (
+            <span key={li} className="relative mx-auto block w-fit whitespace-nowrap">
+              <span className="invisible">{line}</span>
+              <span className="absolute inset-0 text-left">
+                {line.slice(0, typed)}
+                {caretVisible && caretLine === li && <span className="caret" />}
+              </span>
+            </span>
+          );
+        })}
+      </span>
+    </>
+  );
+}
 
 export function Hero() {
   const { t } = useLanguage();
 
   return (
     <section className="relative overflow-hidden" data-od-id="hero">
-      <div className="pointer-events-none absolute inset-0">
-        <FabricWaves className="absolute inset-0 h-full w-full" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg to-transparent" />
-      </div>
-
       <div className="container-content relative flex min-h-screen flex-col items-center justify-center py-20 text-center">
         <h1
-          className="max-w-2xl text-balance font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.03em] text-fg md:text-7xl"
+          className="font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.03em] text-fg md:text-7xl"
           data-od-id="hero-headline"
         >
-          {t.hero.headline}
+          <TypedHeadline text={t.hero.headline} />
         </h1>
 
         <p
