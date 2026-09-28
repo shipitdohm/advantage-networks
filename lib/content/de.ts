@@ -233,6 +233,13 @@ export const de: Dictionary = {
         description:
           "Ein Community-Padel-Event für das Founders-League-Netzwerk, auf den Rooftop-Courts von TIO TIO in Berlin-Friedrichshain, unterstützt mit Garmin-Uhren — Markenaktivierung und Mitglieder-Zugang in einem Event, ganz ohne öffentliches Listing.",
         tags: ["Founders League", "Community-Aktion", "Marken-Sponsoring"],
+        location: "TIO TIO · Berlin-Friedrichshain",
+        stats: [
+          { label: "Teilnehmer" },
+          { label: "Courts" },
+          { label: "Stunden Programm" },
+          { label: "Preise vergeben" },
+        ],
         logos: [
           { name: "Founders League", src: "/brand/channels/founders-league.svg" },
           { name: "TIO TIO", src: "/brand/projects/TIO_TIO_Logo_White.png" },
@@ -331,13 +338,25 @@ export const de: Dictionary = {
     },
   },
   eventsPage: {
-    eyebrow: "Events",
     heading: "Aktivierungen in unseren Netzwerken.",
     intro: "Jede Aktion, die wir innerhalb eines Netzwerks durchführen, wird hier dokumentiert.",
     emptyNote: "Weitere Events kommen hinzu, sobald neue Netzwerke und Markenpartnerschaften live gehen.",
-    mediaLabel: "Event-Fotos & Video — folgen in Kürze",
-    showMediaLabel: "Fotos & Video anzeigen",
-    hideMediaLabel: "Fotos & Video ausblenden",
+    labels: {
+      network: "Netzwerk",
+      partner: "Hauptpartner",
+      location: "Location",
+      date: "Datum",
+      pending: "Folgt",
+    },
+    quotePending: "Hier folgt ein Zitat von einem Teilnehmer.",
+    galleryTitle: "Impressionen",
+    cta: {
+      heading: "Aktivierung für dein Netzwerk oder deine Marke?",
+      body: "Wir entwickeln Events wie dieses gemeinsam mit Communities und Marken — nah an den Mitgliedern, ohne öffentliches Listing.",
+      button: "Gespräch anfragen",
+    },
+    lightbox: { close: "Schließen", prev: "Vorheriges Bild", next: "Nächstes Bild" },
+    sound: { on: "Ton an", off: "Ton aus" },
   },
   consultingPage: {
     eyebrow: "Beratung",

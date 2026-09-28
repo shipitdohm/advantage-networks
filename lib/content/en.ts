@@ -233,6 +233,13 @@ export const en: Dictionary = {
         description:
           "A community padel event for the Founders League network, held on the rooftop courts at TIO TIO in Berlin-Friedrichshain and sponsored with Garmin watches — brand activation and member deal-access in one event, without a single public listing.",
         tags: ["Founders League", "Community activation", "Brand sponsorship"],
+        location: "TIO TIO · Berlin-Friedrichshain",
+        stats: [
+          { label: "Participants" },
+          { label: "Courts" },
+          { label: "Hours of programme" },
+          { label: "Prizes awarded" },
+        ],
         logos: [
           { name: "Founders League", src: "/brand/channels/founders-league.svg" },
           { name: "TIO TIO", src: "/brand/projects/TIO_TIO_Logo_White.png" },
@@ -331,13 +338,25 @@ export const en: Dictionary = {
     },
   },
   eventsPage: {
-    eyebrow: "Events",
     heading: "Activations across our networks.",
     intro: "Every activation we run inside a network, documented here as it happens.",
     emptyNote: "More events are added as networks and brand partnerships go live.",
-    mediaLabel: "Event photos & video — coming soon",
-    showMediaLabel: "Show photos & video",
-    hideMediaLabel: "Hide photos & video",
+    labels: {
+      network: "Network",
+      partner: "Main partner",
+      location: "Location",
+      date: "Date",
+      pending: "Coming soon",
+    },
+    quotePending: "A quote from a participant will go here.",
+    galleryTitle: "Impressions",
+    cta: {
+      heading: "An activation for your network or brand?",
+      body: "We build events like this together with communities and brands — close to the members, without a public listing.",
+      button: "Get in touch",
+    },
+    lightbox: { close: "Close", prev: "Previous image", next: "Next image" },
+    sound: { on: "Sound on", off: "Sound off" },
   },
   consultingPage: {
     eyebrow: "Consulting",

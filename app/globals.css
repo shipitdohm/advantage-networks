@@ -249,6 +249,24 @@ body {
   }
 }
 
+.photo-marquee-track {
+  animation: photo-marquee 110s linear infinite;
+}
+
+.photo-marquee:hover .photo-marquee-track,
+.photo-marquee:focus-within .photo-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes photo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .caret {
   display: inline-block;
   width: 0.06em;
