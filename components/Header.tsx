@@ -75,12 +75,18 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="container-content pt-3 md:pt-4">
       <div
-        className={`relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 transition-shadow duration-300 md:h-14 md:pl-6 md:pr-1.5 ${
-          scrolled ? "header-scrolled" : ""
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 top-0 h-32 transition-opacity duration-500 md:h-40 ${
+          scrolled ? "opacity-100" : "opacity-0"
         }`}
-      >
+        style={{
+          background:
+            "linear-gradient(to bottom, oklch(13% 0.014 260 / 85%) 0%, oklch(13% 0.014 260 / 45%) 55%, transparent 100%)",
+        }}
+      />
+      <div className="container-content pt-3 md:pt-4">
+      <div className="relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 md:h-14 md:pl-6 md:pr-1.5">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- static SVG mark, no optimization needed */}
           <img src="/brand/logo/IconWhite.svg" alt="Advantage Networks" className="h-7 w-auto" />
@@ -185,7 +191,7 @@ export function Header() {
             </div>
 
             {shopOpen && (
-              <div className="absolute left-0 top-full w-56 pt-2">
+              <div className="absolute inset-x-0 top-full pt-2">
                 <div
                   role="menu"
                   className="overflow-hidden rounded-card border border-border bg-surface p-1.5 shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)]"

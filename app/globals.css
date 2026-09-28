@@ -110,13 +110,6 @@ body {
     transform: translateY(0);
   }
 
-  /* The header has no fill or blur at all — just a soft dark shadow once
-     scrolled, enough to lift it off the page without turning it back into
-     a visible panel. */
-  .header-scrolled {
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.65);
-  }
-
   /* Apple "Liquid Glass"-inspired material. Per Apple's own HIG reference
      shots (developer.apple.com/design/human-interface-guidelines/materials),
      the regular (dark-background) variant reads as a darkened window onto
