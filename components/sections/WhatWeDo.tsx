@@ -57,11 +57,13 @@ export function WhatWeDo() {
           {t.whatWeDo.points.map((point, i) => {
             const icon = ICON_META[i % ICON_META.length];
             return (
-              <Reveal key={point.title} delayMs={i * 150} className="bg-bg">
-                <div
-                  className="group h-full p-8 transition-colors duration-300"
-                  style={{ "--item-color": icon.color } as React.CSSProperties}
-                >
+              // The card shell (background/border) renders solid immediately —
+              // only the content inside it fades/slides in. Animating the
+              // shell itself used to flash the grid container's background
+              // (visible behind the still-transparent card) before the card's
+              // own color had faded in.
+              <div key={point.title} className="bg-surface" style={{ "--item-color": icon.color } as React.CSSProperties}>
+                <Reveal delayMs={i * 150} className="group flex h-full flex-col p-8 transition-colors duration-300">
                   <div
                     className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${icon.color}20` }}
@@ -84,8 +86,8 @@ export function WhatWeDo() {
                     {point.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{point.body}</p>
-                </div>
-              </Reveal>
+                </Reveal>
+              </div>
             );
           })}
         </div>
