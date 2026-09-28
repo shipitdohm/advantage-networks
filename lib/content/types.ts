@@ -203,7 +203,6 @@ export interface Dictionary {
     };
     galleryTitle: string;
     cta: { heading: string; body: string; button: string };
-    lightbox: { close: string; prev: string; next: string };
     sound: { on: string; off: string };
   };
   consultingPage: {

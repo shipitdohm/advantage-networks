@@ -354,7 +354,6 @@ export const en: Dictionary = {
       body: "We build events like this together with communities and brands — close to the members, without a public listing.",
       button: "Get in touch",
     },
-    lightbox: { close: "Close", prev: "Previous image", next: "Next image" },
     sound: { on: "Sound on", off: "Sound off" },
   },
   consultingPage: {

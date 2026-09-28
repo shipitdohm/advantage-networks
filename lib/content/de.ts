@@ -354,7 +354,6 @@ export const de: Dictionary = {
       body: "Wir entwickeln Events wie dieses gemeinsam mit Communities und Marken — nah an den Mitgliedern, ohne öffentliches Listing.",
       button: "Gespräch anfragen",
     },
-    lightbox: { close: "Schließen", prev: "Vorheriges Bild", next: "Nächstes Bild" },
     sound: { on: "Ton an", off: "Ton aus" },
   },
   consultingPage: {

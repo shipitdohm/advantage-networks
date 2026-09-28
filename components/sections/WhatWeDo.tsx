@@ -52,17 +52,19 @@ export function WhatWeDo() {
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{t.whatWeDo.summary}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-card border border-border bg-border sm:grid-cols-2 md:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {t.whatWeDo.points.map((point, i) => {
             const icon = ICON_META[i % ICON_META.length];
             return (
-              // The card shell (background/border) renders solid immediately —
-              // only the content inside it fades/slides in. Animating the
-              // shell itself used to flash the grid container's background
-              // (visible behind the still-transparent card) before the card's
-              // own color had faded in.
-              <div key={point.title} className="bg-surface" style={{ "--item-color": icon.color } as React.CSSProperties}>
-                <Reveal delayMs={i * 150} className="group flex h-full flex-col p-8 transition-colors duration-300">
+              // Each card fades/slides in as a whole, one after the other. The
+              // grid itself has no background, so nothing shows behind a card
+              // that has not appeared yet.
+              <Reveal
+                key={point.title}
+                delayMs={i * 200}
+                className="group flex flex-col rounded-card border border-border bg-surface p-8 transition-colors duration-300"
+              >
+                <div style={{ "--item-color": icon.color } as React.CSSProperties} className="contents">
                   <div
                     className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${icon.color}20` }}
@@ -85,8 +87,8 @@ export function WhatWeDo() {
                     {point.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{point.body}</p>
-                </Reveal>
-              </div>
+                </div>
+              </Reveal>
             );
           })}
         </div>

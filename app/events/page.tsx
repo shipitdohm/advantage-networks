@@ -38,18 +38,10 @@ function SafeLogo({ src, name, className }: { src: string; name: string; classNa
   );
 }
 
-function MetaCell({
-  label,
-  children,
-  emphasis = false,
-}: {
-  label: string;
-  children: React.ReactNode;
-  emphasis?: boolean;
-}) {
+function MetaCell({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className={`flex flex-col justify-between gap-5 px-5 py-5 md:px-6 ${emphasis ? "bg-surface" : ""}`}>
-      <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">{label}</span>
+    <div className="flex flex-col justify-between gap-5 bg-surface px-5 py-5 md:px-6">
+      <span className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted opacity-60">{label}</span>
       <div className="flex min-h-[44px] items-end">{children}</div>
     </div>
   );
@@ -76,8 +68,8 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
                     key={tag}
                     className="rounded-pill border px-2.5 py-1 text-[11px] font-medium"
                     style={{
-                      borderColor: `color-mix(in oklch, ${color} 45%, transparent)`,
-                      backgroundColor: `color-mix(in oklch, ${color} 14%, transparent)`,
+                      borderColor: `color-mix(in oklch, ${color} 55%, var(--bg))`,
+                      backgroundColor: `color-mix(in oklch, ${color} 26%, var(--bg))`,
                       color,
                     }}
                   >
@@ -100,7 +92,7 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
                   )}
                 </a>
               </MetaCell>
-              <MetaCell label={e.labels.partner} emphasis>
+              <MetaCell label={e.labels.partner}>
                 <a href="https://www.garmin.com" target="_blank" rel="noopener noreferrer" aria-label={cs.partner}>
                   <SafeLogo src="/brand/partners/garmin-2.svg" name={cs.partner} className="h-9" />
                 </a>
@@ -148,12 +140,7 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
 
       {/* Gallery */}
       <section className="pb-20 md:pb-28">
-        <div className="container-content">
-          <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">{e.galleryTitle}</h2>
-        </div>
-        <div className="mt-10">
-          <PhotoMarquee photos={FPT_PHOTOS} alt={`${cs.title} — ${e.galleryTitle}`} labels={e.lightbox} />
-        </div>
+        <PhotoMarquee photos={FPT_PHOTOS} alt={`${cs.title} — ${e.galleryTitle}`} />
       </section>
     </article>
   );
@@ -165,7 +152,7 @@ export default function EventsPage() {
 
   return (
     <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20" data-od-id="events-hero">
+      <section className="pt-32 pb-24 md:pt-40 md:pb-36" data-od-id="events-hero">
         <div className="container-content">
           <h1 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {e.heading}
@@ -178,7 +165,7 @@ export default function EventsPage() {
         <EventFeature key={cs.title} cs={cs} />
       ))}
 
-      <section className="border-t border-border py-20 md:py-28" data-od-id="events-cta">
+      <section className="py-20 md:py-28" data-od-id="events-cta">
         <div className="container-content">
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">{e.cta.heading}</h2>
