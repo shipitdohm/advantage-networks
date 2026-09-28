@@ -17,7 +17,7 @@ export default function ChannelsPage() {
 
   return (
     <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24" data-od-id="channels-hero">
+      <section className="pt-32 pb-24 md:pt-40 md:pb-36" data-od-id="channels-hero">
         <div className="container-content">
           <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.02em] text-fg md:text-4xl">
             {t.channelsPage.heading}
@@ -26,26 +26,26 @@ export default function ChannelsPage() {
         </div>
       </section>
 
-      <section className="pb-28 md:pb-36">
-        <div className="container-content flex flex-col">
+      <section className="pb-20 md:pb-28">
+        <div className="container-content flex flex-col gap-20 md:gap-28">
           {t.networks.items.map((network, i) => (
             <ChannelSection key={network.slug} network={network} delayMs={i * 90} />
           ))}
         </div>
+      </section>
 
-        <Reveal className="container-content mt-14 border-t border-border pt-14 md:mt-16 md:pt-16">
-          <div className="max-w-xl">
+      <section className="pt-4 pb-20 md:pt-8 md:pb-28" data-od-id="channels-cta">
+        <div className="container-content">
+          <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
               {t.channelsPage.suggestChannel.heading}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
-              {t.channelsPage.suggestChannel.body}
-            </p>
-            <Link href="/contact" className="btn-secondary mt-6 inline-flex">
+            <p className="mt-5 text-base leading-relaxed text-muted">{t.channelsPage.suggestChannel.body}</p>
+            <Link href="/contact" className="btn-primary mt-8 inline-flex">
               {t.channelsPage.suggestChannel.ctaLabel}
             </Link>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
     </>
   );

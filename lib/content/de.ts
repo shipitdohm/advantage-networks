@@ -320,9 +320,9 @@ export const de: Dictionary = {
   },
   channelsPage: {
     eyebrow: "Channels",
-    heading: "Jedes Netzwerk im Detail.",
+    heading: "Jedes Netzwerk im Detail",
     intro:
-      "Drei private Netzwerke, ein Zugang. Wähl unten ein Netzwerk für den vollständigen Deep-Dive — Mitgliedschaft, Vorteile und wie man reinkommt.",
+      "Drei private Netzwerke, ein Zugang. Wähl unten ein Netzwerk für den vollständigen Deep-Dive. Und beantrage direkt deinen Shop-Zugang.",
     suggestChannel: {
       heading: "Hast du selbst ein Netzwerk?",
       body: "Wenn du eine Community, ein Mitgliederprogramm oder ein Netzwerk betreibst, das ein neuer Channel für uns werden könnte, freuen wir uns auf deine Nachricht.",

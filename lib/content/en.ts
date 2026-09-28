@@ -320,9 +320,9 @@ export const en: Dictionary = {
   },
   channelsPage: {
     eyebrow: "Channels",
-    heading: "Every network, in depth.",
+    heading: "Every network, in depth",
     intro:
-      "Three private networks, one kind of access. Pick a network below for the full deep-dive — membership, benefits, and how to get in.",
+      "Three private networks, one kind of access. Pick a network below for the full deep-dive. Then request your own shop access.",
     suggestChannel: {
       heading: "Got a network of your own?",
       body: "If you run a community, membership program, or network that could become a new channel for us, we'd love to hear about it.",
