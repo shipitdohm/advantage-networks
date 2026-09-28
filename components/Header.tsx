@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { completeIntro, useIntroDone } from "@/lib/intro";
 import type { Locale } from "@/lib/content";
 
 const SHOP_OPTIONS = [
@@ -42,6 +43,20 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [shopOpen, langOpen]);
 
+  // The landing page holds the header back until its intro reaches that
+  // step. Any other page shows it right away, and a fallback timer keeps a
+  // stalled intro from leaving the header hidden for good.
+  const introDone = useIntroDone();
+  const introPending = pathname === "/" && !introDone;
+  useEffect(() => {
+    if (pathname !== "/") {
+      completeIntro();
+      return;
+    }
+    const id = setTimeout(completeIntro, 10000);
+    return () => clearTimeout(id);
+  }, [pathname]);
+
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 24);
@@ -63,7 +78,12 @@ export function Header() {
         ];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-opacity duration-[900ms] ease-out ${
+        introPending ? "pointer-events-none opacity-0" : "opacity-100"
+      }`}
+      aria-hidden={introPending || undefined}
+    >
       <div
         aria-hidden="true"
         className={`pointer-events-none absolute inset-x-0 top-0 h-32 transition-opacity duration-500 md:h-40 ${

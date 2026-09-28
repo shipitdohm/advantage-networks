@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { completeIntro, isIntroDone } from "@/lib/intro";
 import { CountUp } from "@/components/CountUp";
 import { Reveal } from "@/components/Reveal";
 
-const START_DELAY_MS = 450;
+// Intro timeline: background alone -> headline types in -> (beat) header
+// fades in -> (beat) subtitle, then the buttons.
+const START_DELAY_MS = 1100;
+const HEADER_AFTER_TYPED_MS = 600;
+const CONTENT_AFTER_HEADER_MS = 900;
+const BUTTONS_AFTER_SUBTITLE_MS = 350;
 const CHAR_DELAY_MS = 65;
 const LINE_PAUSE_MS = 600;
 const CARET_LINGER_MS = 1800;
@@ -15,17 +21,19 @@ const CARET_LINGER_MS = 1800;
 // second. Every line reserves its full width up front (invisible copy) so
 // nothing shifts while it types, and the full sentence stays in the DOM as
 // screen-reader text.
-function TypedHeadline({ text }: { text: string }) {
+function TypedHeadline({ text, instant, onDone }: { text: string; instant: boolean; onDone: () => void }) {
   const split = text.indexOf(", ");
   const lines = split === -1 ? [text] : [text.slice(0, split + 1), text.slice(split + 2)];
   const total = lines.reduce((sum, l) => sum + l.length, 0);
   const firstLen = lines[0].length;
 
-  const [count, setCount] = useState(0);
-  const [caretVisible, setCaretVisible] = useState(true);
+  const [count, setCount] = useState(instant ? total : 0);
+  const [caretVisible, setCaretVisible] = useState(!instant);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (instant || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setCount(total);
       setCaretVisible(false);
       return;
@@ -36,10 +44,11 @@ function TypedHeadline({ text }: { text: string }) {
       const delay = START_DELAY_MS + i * CHAR_DELAY_MS + (i > firstLen ? LINE_PAUSE_MS : 0);
       timers.push(setTimeout(() => setCount(i), delay));
     }
-    const endDelay = START_DELAY_MS + total * CHAR_DELAY_MS + LINE_PAUSE_MS + CARET_LINGER_MS;
-    timers.push(setTimeout(() => setCaretVisible(false), endDelay));
+    const typedAt = START_DELAY_MS + total * CHAR_DELAY_MS + LINE_PAUSE_MS;
+    timers.push(setTimeout(() => onDoneRef.current(), typedAt));
+    timers.push(setTimeout(() => setCaretVisible(false), typedAt + CARET_LINGER_MS));
     return () => timers.forEach(clearTimeout);
-  }, [total, firstLen]);
+  }, [instant, total, firstLen]);
 
   const caretLine = count <= firstLen ? 0 : 1;
 
@@ -66,6 +75,28 @@ function TypedHeadline({ text }: { text: string }) {
 
 export function Hero() {
   const { t } = useLanguage();
+  // Only the first arrival on the landing page plays the intro; coming back
+  // to it later via the nav shows everything immediately.
+  const [instant] = useState(() => isIntroDone());
+  const [showContent, setShowContent] = useState(instant);
+
+  useEffect(() => {
+    if (instant) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      completeIntro();
+      setShowContent(true);
+    }
+  }, [instant]);
+
+  function handleTyped() {
+    setTimeout(completeIntro, HEADER_AFTER_TYPED_MS);
+    setTimeout(() => setShowContent(true), HEADER_AFTER_TYPED_MS + CONTENT_AFTER_HEADER_MS);
+  }
+
+  const reveal = (delayMs: number) => ({
+    className: `transition-all duration-700 ease-out ${showContent ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`,
+    style: { transitionDelay: showContent ? `${delayMs}ms` : "0ms" },
+  });
 
   return (
     <section className="relative overflow-hidden" data-od-id="hero">
@@ -74,17 +105,21 @@ export function Hero() {
           className="font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.03em] text-fg md:text-7xl"
           data-od-id="hero-headline"
         >
-          <TypedHeadline text={t.hero.headline} />
+          <TypedHeadline text={t.hero.headline} instant={instant} onDone={handleTyped} />
         </h1>
 
         <p
-          className="mt-5 max-w-lg text-balance text-sm leading-relaxed text-muted md:text-base"
+          className={`mt-5 max-w-lg text-balance text-sm leading-relaxed text-muted md:text-base ${reveal(0).className}`}
+          style={reveal(0).style}
           data-od-id="hero-subheadline"
         >
           {t.hero.subheadline}
         </p>
 
-        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+        <div
+          className={`mt-7 flex flex-wrap items-center justify-center gap-3 ${reveal(BUTTONS_AFTER_SUBTITLE_MS).className}`}
+          style={reveal(BUTTONS_AFTER_SUBTITLE_MS).style}
+        >
           <Link href="/shop" className="btn-primary px-4 py-2.5" data-od-id="hero-cta-primary">
             {t.hero.ctaPrimary}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
