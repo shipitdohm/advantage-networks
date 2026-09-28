@@ -45,36 +45,25 @@ export function Hero() {
       </div>
 
       <Reveal className="container-content relative pb-24 pt-4 md:pb-32" data-od-id="hero-stats-bar">
-        <div className="relative mx-auto w-full max-w-4xl">
-          <div className="relative overflow-hidden rounded-card border border-border-strong bg-bg px-6 py-8 md:px-10 md:py-10">
-            <div
-              aria-hidden="true"
-              className="animate-pulse-soft pointer-events-none absolute inset-0 rounded-card border border-accent"
-            />
-            <dl
-              className="relative grid grid-cols-4 gap-x-5 gap-y-8 text-center sm:gap-x-8 md:gap-x-10"
-              data-od-id="hero-stats"
-            >
-              {t.hero.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="transition-transform duration-200 ease-out hover:-translate-y-0.5"
-                >
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
-                    <CountUp
-                      target={stat.target}
-                      suffix={stat.suffix}
-                      startValue={stat.startValue}
-                      formatThousands={stat.formatThousands}
-                    />
-                  </dd>
-                  <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
+        <dl
+          className="mx-auto grid w-full max-w-4xl grid-cols-4 gap-x-5 gap-y-8 text-center sm:gap-x-8 md:gap-x-10"
+          data-od-id="hero-stats"
+        >
+          {t.hero.stats.map((stat) => (
+            <div key={stat.label} className="transition-transform duration-200 ease-out hover:-translate-y-0.5">
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="font-display text-xl font-medium tracking-[-0.02em] text-fg sm:text-3xl md:text-5xl">
+                <CountUp
+                  target={stat.target}
+                  suffix={stat.suffix}
+                  startValue={stat.startValue}
+                  formatThousands={stat.formatThousands}
+                />
+              </dd>
+              <p className="mt-2 text-[10px] text-muted sm:text-xs">{stat.label}</p>
+            </div>
+          ))}
+        </dl>
       </Reveal>
     </section>
   );

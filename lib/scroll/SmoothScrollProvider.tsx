@@ -4,19 +4,18 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 
 /**
- * Weighted inertial scroll — slight resistance on the first tick, then
- * momentum, then a soft settle. Mirrors the reference sites' scroll feel
- * (fora.so runs the same Lenis library). No-ops under reduced-motion,
- * falling back to native scrolling.
+ * Light inertial scroll — just enough smoothing to take the edge off native
+ * scroll, without the heavy, laggy drag a longer duration/lower lerp gives.
+ * No-ops under reduced-motion, falling back to native scrolling.
  */
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t: number) => 1 - Math.pow(1 - t, 3.2),
-      lerp: 0.1,
+      duration: 0.7,
+      easing: (t: number) => 1 - Math.pow(1 - t, 2),
+      lerp: 0.16,
       wheelMultiplier: 1,
       touchMultiplier: 1.1,
     });

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container-content grid gap-8 py-10 md:grid-cols-[1.3fr_1fr_1fr] md:py-12">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element -- static SVG mark, no optimization needed */}
-          <img src="/brand/logo/Logo-White.svg" alt="Advantage Networks" className="h-8 w-auto" />
+          <img src="/brand/logo/Logo-White.svg" alt="Advantage Networks" className="h-12 w-auto md:h-14" />
         </div>
 
         {t.footer.columns.map((col) => (

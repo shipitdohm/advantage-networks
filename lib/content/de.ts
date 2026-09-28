@@ -20,14 +20,14 @@ export const de: Dictionary = {
       { label: "Kontakt", href: "/contact" },
     ],
     langLabel: "EN",
-    shop: "Shop betreten",
+    shop: "Betrete deinen Advantage",
   },
   hero: {
     eyebrow: "Vertrieb über private Netzwerke",
     headline: "Your network, your advantage.",
     subheadline:
       "Wir verbinden definierte Communities mit exklusiven Konditionen auf Premium-Technologieprodukte. Exklusiv, smart, skalierbar.",
-    ctaPrimary: "Zum Shop",
+    ctaPrimary: "Betrete deinen Advantage",
     ctaSecondary: "Zugang beantragen",
     stats: [
       { target: 100, suffix: "+", label: "Erfolgreiche Aktivierungen" },

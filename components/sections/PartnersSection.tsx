@@ -64,7 +64,7 @@ export function PartnersSection() {
         </Reveal>
       </div>
 
-      <Reveal delayMs={100} className="mt-14 border-y border-border-hairline py-8 md:py-10">
+      <Reveal delayMs={100} className="mt-14">
         <div
           className="relative w-full overflow-hidden"
           style={{

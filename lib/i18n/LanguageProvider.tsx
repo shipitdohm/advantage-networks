@@ -14,9 +14,9 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  // Every fresh visit starts in English — no restoring a previously
+  // Every fresh visit starts in German — no restoring a previously
   // stored preference. Switching languages still works for the session.
-  const [locale, setLocaleState] = useState<Locale>("en");
+  const [locale, setLocaleState] = useState<Locale>("de");
 
   const setLocale = (next: Locale) => setLocaleState(next);
 

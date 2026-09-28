@@ -28,7 +28,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const shopRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
@@ -41,23 +40,6 @@ export function Header() {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [shopOpen, langOpen]);
-
-  useEffect(() => {
-    function onLenisScroll(e: Event) {
-      const scroll = (e as CustomEvent<number>).detail;
-      setScrolled(scroll > 24);
-    }
-    function onNativeScroll() {
-      setScrolled(window.scrollY > 24);
-    }
-    setScrolled(window.scrollY > 24);
-    window.addEventListener("lenis-scroll", onLenisScroll);
-    window.addEventListener("scroll", onNativeScroll, { passive: true });
-    return () => {
-      window.removeEventListener("lenis-scroll", onLenisScroll);
-      window.removeEventListener("scroll", onNativeScroll);
-    };
-  }, []);
 
   const languages: { value: Locale; label: string; code: string }[] =
     locale === "en"
@@ -73,11 +55,7 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="container-content pt-3 md:pt-4">
-      <div
-        className={`liquid-glass relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 md:h-14 md:pl-6 md:pr-1.5 ${
-          scrolled ? "liquid-glass-scrolled" : ""
-        }`}
-      >
+      <div className="relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 md:h-14 md:pl-6 md:pr-1.5">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- static SVG mark, no optimization needed */}
           <img src="/brand/logo/IconWhite.svg" alt="Advantage Networks" className="h-7 w-auto" />
@@ -182,10 +160,10 @@ export function Header() {
             </div>
 
             {shopOpen && (
-              <div className="absolute inset-x-0 top-full pt-2">
+              <div className="absolute left-0 top-full w-56 pt-2">
                 <div
                   role="menu"
-                  className="overflow-hidden rounded-card border border-border bg-surface shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)]"
+                  className="overflow-hidden rounded-card border border-border bg-surface p-1.5 shadow-[0_20px_40px_-24px_rgba(0,0,0,0.6)]"
                 >
                   {SHOP_OPTIONS.map((option) => (
                     <Link
@@ -193,7 +171,7 @@ export function Header() {
                       href={option.href}
                       role="menuitem"
                       onClick={() => setShopOpen(false)}
-                      className="block whitespace-nowrap px-6 py-2.5 text-center text-sm font-medium text-fg transition-colors hover:bg-surface-2"
+                      className="block whitespace-nowrap rounded-lg px-3 py-2.5 text-left text-sm font-medium text-fg transition-colors hover:bg-surface-2"
                     >
                       {option.label}
                     </Link>

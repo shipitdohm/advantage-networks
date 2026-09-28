@@ -22,13 +22,6 @@
   --accent-active: color-mix(in oklch, #2700ff 82%, black);
   --accent-soft: rgb(39 0 255 / 14%);
   --accent-soft-2: rgb(39 0 255 / 7%);
-  /* Slightly dimmed accent for large solid-fill surfaces (e.g. the hero
-     stats bar), where the full-saturation accent is too intense. */
-  --accent-dim: color-mix(in oklch, #2700ff 55%, black);
-  /* White with alpha baked in, for blurred glow effects — Tailwind can't
-     apply its /opacity modifier to a var()-based color, so the alpha has
-     to live in the variable itself, same pattern as --accent-soft. */
-  --glow: rgb(255 255 255 / 18%);
 
   --success: oklch(68% 0.15 150);
   --warning: #f5a623;
@@ -155,25 +148,10 @@ body {
     opacity: 0.6;
   }
 
-  .liquid-glass-scrolled {
-    background: oklch(24% 0.02 260 / 52%);
-    backdrop-filter: blur(7px) saturate(190%);
-    -webkit-backdrop-filter: blur(7px) saturate(190%);
-  }
-
   .grid-texture {
     background-image: linear-gradient(to right, oklch(100% 0 0 / 6%) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(100% 0 0 / 6%) 1px, transparent 1px);
     background-size: 64px 64px;
-  }
-
-  /* Same pattern as .grid-texture, scaled down for small contained
-     surfaces (e.g. the hero stats box) — at 64px, only 2-3 cells fit in a
-     short box and the grid reads as oversized/chunky instead of a texture. */
-  .grid-texture-sm {
-    background-image: linear-gradient(to right, oklch(100% 0 0 / 6%) 1px, transparent 1px),
-      linear-gradient(to bottom, oklch(100% 0 0 / 6%) 1px, transparent 1px);
-    background-size: 16px 16px;
   }
 
   /* Restrained grain — a single subtle texture layer, not a slop gradient.
