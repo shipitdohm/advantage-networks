@@ -28,6 +28,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const shopRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
 
@@ -40,6 +41,26 @@ export function Header() {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [shopOpen, langOpen]);
+
+  // Lenis owns the scroll loop, so window.scrollY isn't reliably kept in
+  // sync — listen for its own scroll event instead, with a native fallback
+  // for when Lenis is off (e.g. reduced-motion).
+  useEffect(() => {
+    function onLenisScroll(e: Event) {
+      const scroll = (e as CustomEvent<number>).detail;
+      setScrolled(scroll > 24);
+    }
+    function onNativeScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    setScrolled(window.scrollY > 24);
+    window.addEventListener("lenis-scroll", onLenisScroll);
+    window.addEventListener("scroll", onNativeScroll, { passive: true });
+    return () => {
+      window.removeEventListener("lenis-scroll", onLenisScroll);
+      window.removeEventListener("scroll", onNativeScroll);
+    };
+  }, []);
 
   const languages: { value: Locale; label: string; code: string }[] =
     locale === "en"
@@ -55,7 +76,11 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="container-content pt-3 md:pt-4">
-      <div className="relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 md:h-14 md:pl-6 md:pr-1.5">
+      <div
+        className={`relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 transition-[background,box-shadow] duration-300 md:h-14 md:pl-6 md:pr-1.5 ${
+          scrolled ? "header-scrolled" : ""
+        }`}
+      >
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element -- static SVG mark, no optimization needed */}
           <img src="/brand/logo/IconWhite.svg" alt="Advantage Networks" className="h-7 w-auto" />

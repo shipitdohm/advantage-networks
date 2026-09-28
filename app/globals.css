@@ -110,6 +110,17 @@ body {
     transform: translateY(0);
   }
 
+  /* The header itself has no background — but once page content is
+     scrolling underneath it, plain text-on-text is illegible. A light
+     blur plus a soft shadow is enough to separate the two without turning
+     the nav back into a visible panel. */
+  .header-scrolled {
+    background: oklch(13% 0.014 260 / 45%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+  }
+
   /* Apple "Liquid Glass"-inspired material. Per Apple's own HIG reference
      shots (developer.apple.com/design/human-interface-guidelines/materials),
      the regular (dark-background) variant reads as a darkened window onto
@@ -179,13 +190,6 @@ body {
     pointer-events: none;
   }
 
-  /* Infinite logo marquee — the track holds two copies of the list back to
-   * back, so a 50% translate loops seamlessly. Keeps running on hover;
-   * individual logos brighten instead (see .partner-logo). */
-  .marquee-track {
-    animation: marquee 100s linear infinite;
-  }
-
   /* Hero glow drift — the blob slowly wanders instead of sitting pinned in
    * one spot, echoing the fabric-wave motion behind it. -50% keeps the
    * horizontal centering baked into every keyframe step. */
@@ -195,16 +199,15 @@ body {
 
   /* Partner logo marks — source files arrive in whatever color the brand
    * kit shipped (red, blue, green, black...). Forcing brightness(0)
-   * invert(1) flattens any of that to solid white, so the whole marquee
+   * invert(1) flattens any of that to solid white, so the static grid
    * reads as one consistent set instead of a mismatched rainbow. */
   .partner-logo {
     filter: brightness(0) invert(1);
-    opacity: 0.55;
     transition: opacity 0.2s;
   }
 
   .partner-logo:hover {
-    opacity: 1;
+    opacity: 0.75;
   }
 
   .status-chip-active {
@@ -279,14 +282,6 @@ body {
   }
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 @keyframes glow-drift {
   0% {

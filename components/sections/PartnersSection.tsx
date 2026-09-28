@@ -50,7 +50,6 @@ const BRAND_URLS: Record<string, string> = {
 
 export function PartnersSection() {
   const { t } = useLanguage();
-  const track = [...t.partners.names, ...t.partners.names];
 
   return (
     <section className="py-20 md:py-28" data-od-id="partners">
@@ -62,47 +61,40 @@ export function PartnersSection() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted">{t.partners.intro}</p>
         </Reveal>
-      </div>
 
-      <Reveal delayMs={100} className="mt-14">
-        <div
-          className="relative w-full overflow-hidden"
-          style={{
-            maskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-            WebkitMaskImage: "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-          }}
+        <Reveal
+          delayMs={100}
+          className="mt-14 grid grid-cols-2 gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-6 md:gap-x-12 md:gap-y-14 lg:grid-cols-9"
         >
-          <div className="marquee-track flex w-max items-center gap-16 md:gap-24">
-            {track.map((name, i) => {
-              const file = LOGO_FILES[name];
-              const url = BRAND_URLS[name];
-              return (
-                <a
-                  key={`${name}-${i}`}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={name}
-                  className="flex h-7 flex-none items-center md:h-8"
-                >
-                  {file ? (
-                    // eslint-disable-next-line @next/next/no-img-element -- brand SVG, no optimization needed
-                    <img
-                      src={`/brand/partners/${file}`}
-                      alt={name}
-                      className="partner-logo h-full w-auto object-contain"
-                    />
-                  ) : (
-                    <span className="font-display text-xl font-medium tracking-tight text-muted transition-colors hover:text-fg md:text-2xl">
-                      {name}
-                    </span>
-                  )}
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </Reveal>
+          {t.partners.names.map((name) => {
+            const file = LOGO_FILES[name];
+            const url = BRAND_URLS[name];
+            return (
+              <a
+                key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="flex h-9 items-center justify-center"
+              >
+                {file ? (
+                  // eslint-disable-next-line @next/next/no-img-element -- brand SVG, no optimization needed
+                  <img
+                    src={`/brand/partners/${file}`}
+                    alt={name}
+                    className="partner-logo h-full w-auto object-contain"
+                  />
+                ) : (
+                  <span className="font-display text-lg font-medium tracking-tight text-white transition-opacity hover:opacity-75">
+                    {name}
+                  </span>
+                )}
+              </a>
+            );
+          })}
+        </Reveal>
+      </div>
     </section>
   );
 }
