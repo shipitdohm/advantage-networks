@@ -6,9 +6,9 @@ import type { Dictionary } from "./types";
 
 export const de: Dictionary = {
   meta: {
-    title: "Advantage Networks — Vertrieb über private Netzwerke für Consumer Electronics",
+    title: "Advantage Networks — Exklusiver Zugang zu Consumer Electronics über private Netzwerke",
     description:
-      "Advantage Networks vertreibt Consumer-Electronics-Produkte exklusiv über private, Einladungs-basierte Mitglieder-Netzwerke — starke Konditionen für Mitglieder, exklusiver, vertrauensvoller Vertrieb für Marken.",
+      "Advantage Networks bietet exklusiven Zugang zu Consumer-Electronics-Produkten über private, einladungsbasierte Mitglieder-Netzwerke — starke Konditionen für Mitglieder, vertrauensvolle Partnerschaften für Marken.",
   },
   nav: {
     links: [
@@ -23,7 +23,7 @@ export const de: Dictionary = {
     shop: "Betrete deinen Advantage",
   },
   hero: {
-    eyebrow: "Vertrieb über private Netzwerke",
+    eyebrow: "Exklusiver Zugang über private Netzwerke",
     headline: "Your network, your advantage.",
     subheadline:
       "Wir verbinden definierte Communities mit exklusiven Konditionen auf Premium-Technologieprodukte. Exklusiv, smart, skalierbar.",
@@ -38,13 +38,13 @@ export const de: Dictionary = {
   },
   whatWeDo: {
     eyebrow: "Was wir machen",
-    heading: "Wir machen aus privaten Communities einen Vertriebskanal.",
+    heading: "Wir verwandeln private Communities in echte Vorteile.",
     summary:
       "Advantage Networks arbeitet mit Elektronikmarken zusammen und verkauft exklusiv innerhalb geschlossener, Login-geschützter Mitglieder-Netzwerke — Preise gelangen so nie in öffentliche Vergleichsportale.",
     points: [
       {
         title: "Exklusive Konditionen",
-        body: "Nicht öffentlich, nicht vergleichbar. Preise nur für verifizierte Mitglieder – deutlich unter Marktpreis dank direkter Partnerschaften mit Herstellern.",
+        body: "Nicht öffentlich, nicht vergleichbar. Attraktive Preise nur für verifizierte Mitglieder – möglich durch direkte Partnerschaften mit Herstellern.",
       },
       {
         title: "Community-fokussiert",
@@ -75,7 +75,7 @@ export const de: Dictionary = {
       },
       {
         title: "Exklusiv einkaufen",
-        body: "Hunderte Produkte führender Marken zu Konditionen, die du öffentlich nicht findest.",
+        body: "Hunderte Produkte führender Marken zu attraktiven Mitgliederkonditionen.",
       },
       {
         title: "Netzwerk stärken",
@@ -86,7 +86,7 @@ export const de: Dictionary = {
   partners: {
     eyebrow: "Partner & Marken",
     heading: "Führende Marken. Exklusive Konditionen.",
-    intro: "Direkte Partnerschaften mit Herstellern ermöglichen Preise, die im freien Handel nicht verfügbar sind.",
+    intro: "Direkte Partnerschaften mit Herstellern ermöglichen attraktive Konditionen für unsere Mitglieder.",
     names: [
       "Razer",
       "Garmin",
@@ -110,7 +110,7 @@ export const de: Dictionary = {
   },
   networks: {
     eyebrow: "Die Netzwerke",
-    heading: "Drei Netzwerke. Ein Vertriebsmodell.",
+    heading: "Drei Netzwerke. Ein Zugang.",
     intro:
       "Jedes Netzwerk ist eine eigene geschlossene Community mit eigenem Login-geschütztem Shop — gleiche verhandelte Konditionen, unterschiedliche Mitgliedschaft.",
     activeLabel: "Aktiv",
@@ -124,17 +124,17 @@ export const de: Dictionary = {
         name: "Helium Network",
         tagline: "Der Ursprung",
         description:
-          "Das ursprüngliche Netzwerk — die größte dezentrale Community, die wir bedienen, und die, die das Modell des privaten Vertriebs bewiesen hat.",
+          "Das ursprüngliche Netzwerk — die größte dezentrale Community, die wir bedienen, und die, die unser Modell des privaten Zugangs bewiesen hat.",
         status: "Gründungsnetzwerk",
         href: "/channels#helium-network",
         accentColor: "#5E25FD",
         cardAbbr: "HNT",
         detail: {
           subheadline:
-            "Das schnellstwachsende dezentrale IoT-Netzwerk der Welt – und der Ausgangspunkt von Advantage Networks. Hier haben Hotspot-Betreiber zum ersten Mal verdiente HNT in echten Hardware-Wert verwandelt, und hier ist unser Modell des privaten Vertriebs entstanden. Bis heute ist es unsere größte und ursprüngliche Community.",
+            "Das schnellstwachsende dezentrale IoT-Netzwerk der Welt – und der Ausgangspunkt von Advantage Networks. Hier haben Hotspot-Betreiber zum ersten Mal verdiente HNT in echten Hardware-Wert verwandelt, und hier ist unser Modell des privaten Zugangs entstanden. Bis heute ist es unsere größte und ursprüngliche Community.",
           bodyParagraphs: [
             "Helium ist ein dezentrales IoT-Netzwerk, das von der Community betrieben wird. Hotspot-Betreiber verdienen HNT-Token für die Bereitstellung der Netzwerk-Infrastruktur.",
-            "Mit Advantage Networks können Helium-Betreiber ihre verdiente HNT direkt gegen Premium-IT-Hardware einlösen – zu Konditionen, die den Markt schlagen.",
+            "Mit Advantage Networks können Helium-Betreiber ihre verdiente HNT direkt gegen Premium-IT-Hardware einlösen – zu attraktiven Mitgliederkonditionen.",
             "Advantage Networks ist innerhalb dieser Community entstanden — gebaut von und für Helium-Betreiber, bevor wir auf Founders League und Alumni erweitert haben. Dieser Ursprung prägt bis heute, wie eng wir mit dem Netzwerk zusammenarbeiten.",
           ],
           ctaLabel: "Shop-Zugang beantragen",
@@ -182,7 +182,7 @@ export const de: Dictionary = {
             { label: "Zielgruppe", value: "Gründer & Teams" },
             { label: "Vorteil", value: "Gebündelte Kaufkraft" },
             { label: "Zahlungsarten", value: "Rechnung, Karte, USt-ID" },
-            { label: "Modell", value: "B2B Procurement" },
+            { label: "Modell", value: "Team-Einkauf" },
           ],
           websiteUrl: "https://foundersleague.de",
         },
@@ -244,14 +244,14 @@ export const de: Dictionary = {
   whyNow: {
     eyebrow: "Warum jetzt",
     heading: "Öffentlicher Preisvergleich hat Handelsmargen zerstört. Private Netzwerke korrigieren den Anreiz.",
-    body: "Wenn jeder Preis öffentlich ist, konkurrieren Marken über Rabatt statt über Beziehung. Private, kuratierte Netzwerke lassen Marken Preise schützen und trotzdem echtes Volumen bewegen — und Mitglieder erhalten Konditionen, die öffentlich nie überleben würden.",
+    body: "Wenn jeder Preis öffentlich ist, konkurrieren Marken über Rabatt statt über Beziehung. Private, kuratierte Netzwerke lassen Marken Preise schützen und trotzdem echtes Volumen bewegen — und Mitglieder profitieren von attraktiven, exklusiven Konditionen.",
     points: [
       {
         title: "Handelsmargen stehen unter Dauerdruck",
         body: "Vergleichsportale zwingen Marken in ein Rennen nach unten, sobald ein Preis öffentlich wird.",
       },
       {
-        title: "Communities sind bereits die Vertriebsebene",
+        title: "Communities sind längst der Zugangsweg",
         body: "Menschen kaufen bereits über Netzwerke, denen sie vertrauen — wir formalisieren das als Kanal.",
       },
       {
@@ -281,7 +281,7 @@ export const de: Dictionary = {
     },
   },
   footer: {
-    tagline: "Consumer Electronics — vertrieben über die Netzwerke, denen du vertraust.",
+    tagline: "Consumer Electronics — exklusiver Zugang über die Netzwerke, denen du vertraust.",
     columns: [
       {
         title: "Unternehmen",
@@ -323,10 +323,10 @@ export const de: Dictionary = {
     eyebrow: "Channels",
     heading: "Jedes Netzwerk im Detail.",
     intro:
-      "Drei private Netzwerke, ein Vertriebsmodell. Wähl unten ein Netzwerk für den vollständigen Deep-Dive — Mitgliedschaft, Vorteile und wie man reinkommt.",
+      "Drei private Netzwerke, ein Zugang. Wähl unten ein Netzwerk für den vollständigen Deep-Dive — Mitgliedschaft, Vorteile und wie man reinkommt.",
     suggestChannel: {
       heading: "Hast du selbst ein Netzwerk?",
-      body: "Wenn du eine Community, ein Mitgliederprogramm oder ein Netzwerk betreibst, das ein neuer Vertriebskanal für uns werden könnte, freuen wir uns auf deine Nachricht.",
+      body: "Wenn du eine Community, ein Mitgliederprogramm oder ein Netzwerk betreibst, das ein neuer Channel für uns werden könnte, freuen wir uns auf deine Nachricht.",
       ctaLabel: "Kontakt aufnehmen",
     },
   },
@@ -408,9 +408,9 @@ export const de: Dictionary = {
   },
   aboutPage: {
     eyebrow: "Über uns",
-    heading: "Vom Consulting über Helium-Mining zum Vertriebsmodell.",
+    heading: "Vom Consulting über Helium-Mining zu privaten Netzwerken.",
     intro:
-      "Advantage Networks ist nicht als Vertriebsunternehmen gestartet. Das Modell entstand aus der Beobachtung eines einzelnen dezentralen Netzwerks.",
+      "Advantage Networks ist nicht so gestartet, wie es heute aussieht. Das Modell entstand aus der Beobachtung eines einzelnen dezentralen Netzwerks.",
     timeline: [
       {
         year: "Consulting",
@@ -425,12 +425,12 @@ export const de: Dictionary = {
       {
         year: "Die Erkenntnis",
         title: "Private Netzwerke verändern die Ökonomie",
-        body: "Der Betrieb dieses Netzwerks zeigte ein Muster: geschlossene, vertrauensvolle Communities tragen Preise und Konditionen, die der öffentliche Markt nicht trägt — für beide Seiten des Handels.",
+        body: "Der Betrieb dieses Netzwerks zeigte ein Muster: geschlossene, vertrauensvolle Communities ermöglichen Preise und Konditionen, von denen beide Seiten profitieren.",
       },
       {
         year: "Heute",
-        title: "Vertrieb von Consumer Electronics",
-        body: "Aus dieser Erkenntnis wurde Advantage Networks — dasselbe Modell privater Netzwerke, angewendet auf den Vertrieb von Consumer Electronics über Helium Network, Founders League und Alumni Network.",
+        title: "Zugang zu Consumer Electronics",
+        body: "Aus dieser Erkenntnis wurde Advantage Networks — dasselbe Modell privater Netzwerke, angewendet auf den Zugang zu Consumer Electronics über Helium Network, Founders League und Alumni Network.",
       },
     ],
     team: {
@@ -454,11 +454,11 @@ export const de: Dictionary = {
     eyebrow: "Kontakt",
     heading: "Marke, Community oder Mitglied — sprich mit uns.",
     intro:
-      "Egal ob du eine Vertriebspartnerschaft prüfst, eine Community betreibst, die zum Channel werden könnte, oder bereits Mitglied eines Netzwerks bist — melde dich.",
+      "Egal ob du eine Partnerschaft prüfst, eine Community betreibst, die zum Channel werden könnte, oder bereits Mitglied eines Netzwerks bist — melde dich.",
     emailLabel: "E-Mail",
     email: "info@advantage-net.com",
     channels: [
-      { label: "Marken & Hersteller", body: "Anfragen zu Vertriebspartnerschaften." },
+      { label: "Marken & Hersteller", body: "Anfragen zu Partnerschaften." },
       { label: "Netzwerk-Betreiber", body: "Bring deine Community als neuen Channel ein." },
       { label: "Community-Mitglieder", body: "Fragen zu Zugang oder einem bestehenden Netzwerk." },
     ],

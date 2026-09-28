@@ -6,9 +6,9 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Advantage Networks — Private-network distribution for consumer electronics",
+    title: "Advantage Networks — Exclusive access to consumer electronics through private networks",
     description:
-      "Advantage Networks distributes consumer electronics exclusively through private, invite-only member networks — better deals for members, exclusive trusted distribution for brands.",
+      "Advantage Networks gives members exclusive access to consumer electronics through private, invite-only networks — better deals for members, trusted partnerships for brands.",
   },
   nav: {
     links: [
@@ -23,7 +23,7 @@ export const en: Dictionary = {
     shop: "Enter your Advantage",
   },
   hero: {
-    eyebrow: "Private-network distribution",
+    eyebrow: "Private-network access",
     headline: "Your network, your advantage.",
     subheadline:
       "We connect defined communities with exclusive conditions on premium technology products. Exclusive, smart, scalable.",
@@ -38,13 +38,13 @@ export const en: Dictionary = {
   },
   whatWeDo: {
     eyebrow: "What we do",
-    heading: "We turn private communities into a distribution channel.",
+    heading: "We turn private communities into real advantages.",
     summary:
       "Advantage Networks partners with electronics brands to sell exclusively inside closed, login-gated member networks — so prices never leak into public comparison sites.",
     points: [
       {
         title: "Exclusive conditions",
-        body: "Not public, not comparable. Prices for verified members only — well below market price thanks to direct partnerships with manufacturers.",
+        body: "Not public, not comparable. Great pricing for verified members only — made possible by direct partnerships with manufacturers.",
       },
       {
         title: "Community-focused",
@@ -75,7 +75,7 @@ export const en: Dictionary = {
       },
       {
         title: "Shop exclusively",
-        body: "Hundreds of products from leading brands, at conditions you won't find in the public market.",
+        body: "Hundreds of products from leading brands, at exclusive member pricing.",
       },
       {
         title: "Strengthen the network",
@@ -86,7 +86,7 @@ export const en: Dictionary = {
   partners: {
     eyebrow: "Partners & brands",
     heading: "Leading brands. Exclusive conditions.",
-    intro: "Direct partnerships with manufacturers make prices possible that you won't find in the open market.",
+    intro: "Direct partnerships with manufacturers make great member pricing possible.",
     names: [
       "Razer",
       "Garmin",
@@ -110,7 +110,7 @@ export const en: Dictionary = {
   },
   networks: {
     eyebrow: "The networks",
-    heading: "Three networks. One distribution model.",
+    heading: "Three networks. One kind of access.",
     intro:
       "Each network is its own closed community with its own login-gated shop — same negotiated deals, different membership.",
     activeLabel: "Active",
@@ -124,17 +124,17 @@ export const en: Dictionary = {
         name: "Helium Network",
         tagline: "Where it started",
         description:
-          "The original network — the largest decentralized community we serve, and the one that proved the private-distribution model works.",
+          "The original network — the largest decentralized community we serve, and the one that proved our private-access model works.",
         status: "Founding network",
         href: "/channels#helium-network",
         accentColor: "#5E25FD",
         cardAbbr: "HNT",
         detail: {
           subheadline:
-            "The fastest-growing decentralized IoT network in the world — and the starting point of Advantage Networks. It's where hotspot operators first turned earned HNT into real hardware value, and where our private-distribution model was born. Today it's still our founding and largest community.",
+            "The fastest-growing decentralized IoT network in the world — and the starting point of Advantage Networks. It's where hotspot operators first turned earned HNT into real hardware value, and where our private-access model was born. Today it's still our founding and largest community.",
           bodyParagraphs: [
             "Helium is a decentralized IoT network operated by its community. Hotspot operators earn HNT tokens for providing network infrastructure.",
-            "With Advantage Networks, Helium operators can redeem their earned HNT directly for premium IT hardware — at conditions that beat the open market.",
+            "With Advantage Networks, Helium operators can redeem their earned HNT directly for premium IT hardware — at exclusive member conditions.",
             "Advantage Networks started inside this community, built by and for Helium operators before expanding to Founders League and Alumni. That origin still shapes how closely we work with the network today.",
           ],
           ctaLabel: "Request Shop Access",
@@ -182,7 +182,7 @@ export const en: Dictionary = {
             { label: "Audience", value: "Founders & teams" },
             { label: "Advantage", value: "Combined purchasing power" },
             { label: "Payment", value: "Invoice, card, VAT ID" },
-            { label: "Model", value: "B2B procurement" },
+            { label: "Model", value: "Team purchasing" },
           ],
           websiteUrl: "https://foundersleague.de",
         },
@@ -244,14 +244,14 @@ export const en: Dictionary = {
   whyNow: {
     eyebrow: "Why this matters now",
     heading: "Public price comparison broke retail margins. Private networks fix the incentive.",
-    body: "When every price is public, brands compete on discount, not relationship. Private, curated networks let brands protect pricing while still moving real volume — and let members access deals that would never survive being public.",
+    body: "When every price is public, brands compete on discount, not relationship. Private, curated networks let brands protect pricing while still moving real volume — and let members enjoy exclusive, attractive deals.",
     points: [
       {
         title: "Retail margin is under permanent pressure",
         body: "Comparison sites force brands into a race to the bottom the moment a price goes public.",
       },
       {
-        title: "Communities are already the distribution layer",
+        title: "Communities are already how people get access",
         body: "People already trust and buy through the networks they're part of — we formalize that as a channel.",
       },
       {
@@ -281,7 +281,7 @@ export const en: Dictionary = {
     },
   },
   footer: {
-    tagline: "Consumer electronics, distributed through the networks you trust.",
+    tagline: "Consumer electronics, exclusive access through the networks you trust.",
     columns: [
       {
         title: "Company",
@@ -323,10 +323,10 @@ export const en: Dictionary = {
     eyebrow: "Channels",
     heading: "Every network, in depth.",
     intro:
-      "Three private networks, one distribution model. Pick a network below for the full deep-dive — membership, benefits, and how to get in.",
+      "Three private networks, one kind of access. Pick a network below for the full deep-dive — membership, benefits, and how to get in.",
     suggestChannel: {
       heading: "Got a network of your own?",
-      body: "If you run a community, membership program, or network that could become a new distribution channel for us, we'd love to hear about it.",
+      body: "If you run a community, membership program, or network that could become a new channel for us, we'd love to hear about it.",
       ctaLabel: "Get in touch",
     },
   },
@@ -408,9 +408,9 @@ export const en: Dictionary = {
   },
   aboutPage: {
     eyebrow: "About",
-    heading: "From consulting, to Helium mining, to a distribution model.",
+    heading: "From consulting, to Helium mining, to private networks.",
     intro:
-      "Advantage Networks didn't start as a distribution company. The model came from watching what happened inside one specific decentralized network.",
+      "Advantage Networks didn't start out looking like it does today. The model came from watching what happened inside one specific decentralized network.",
     timeline: [
       {
         year: "Consulting",
@@ -425,12 +425,12 @@ export const en: Dictionary = {
       {
         year: "The insight",
         title: "Private networks change the economics",
-        body: "Running that network surfaced a pattern: closed, trusted communities can support pricing and deals that public markets can't — for both sides of the trade.",
+        body: "Running that network surfaced a pattern: closed, trusted communities make pricing and deals possible that work for both sides.",
       },
       {
         year: "Today",
-        title: "Consumer electronics distribution",
-        body: "That insight became Advantage Networks — applying the same private-network model to distributing consumer electronics through the Helium Network, Founders League, and Alumni Network.",
+        title: "Consumer electronics access",
+        body: "That insight became Advantage Networks — applying the same private-network model to consumer electronics access through the Helium Network, Founders League, and Alumni Network.",
       },
     ],
     team: {
@@ -454,11 +454,11 @@ export const en: Dictionary = {
     eyebrow: "Contact",
     heading: "Brand, community, or member — let's talk.",
     intro:
-      "Whether you're exploring a distribution partnership, running a community that could become a channel, or you're already a network member with a question — reach out.",
+      "Whether you're exploring a partnership, running a community that could become a channel, or you're already a network member with a question — reach out.",
     emailLabel: "Email",
     email: "info@advantage-net.com",
     channels: [
-      { label: "Brands & manufacturers", body: "Distribution partnership inquiries." },
+      { label: "Brands & manufacturers", body: "Partnership inquiries." },
       { label: "Network operators", body: "Bring your community on as a new channel." },
       { label: "Community members", body: "Questions about access or an existing network." },
     ],
