@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
-import { SmoothScrollProvider } from "@/lib/scroll/SmoothScrollProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TabTitleMarquee } from "@/components/TabTitleMarquee";
@@ -49,13 +48,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FabricWaves className="absolute inset-0 h-full w-full" />
         </div>
         <LanguageProvider>
-          <SmoothScrollProvider>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </SmoothScrollProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </LanguageProvider>
       </body>
     </html>

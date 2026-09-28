@@ -38,13 +38,6 @@ html {
   color-scheme: dark;
 }
 
-/* Lenis drives scroll smoothing itself once initialized — disable the
-   native CSS smoothing so the two don't fight (anchor jumps still use
-   native scroll-behavior when Lenis is off, e.g. reduced-motion). */
-html.lenis {
-  scroll-behavior: auto;
-}
-
 body {
   background-color: var(--bg);
   color: var(--fg);

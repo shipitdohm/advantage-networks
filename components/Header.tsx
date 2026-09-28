@@ -42,24 +42,13 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [shopOpen, langOpen]);
 
-  // Lenis owns the scroll loop, so window.scrollY isn't reliably kept in
-  // sync — listen for its own scroll event instead, with a native fallback
-  // for when Lenis is off (e.g. reduced-motion).
   useEffect(() => {
-    function onLenisScroll(e: Event) {
-      const scroll = (e as CustomEvent<number>).detail;
-      setScrolled(scroll > 24);
-    }
-    function onNativeScroll() {
+    function onScroll() {
       setScrolled(window.scrollY > 24);
     }
-    setScrolled(window.scrollY > 24);
-    window.addEventListener("lenis-scroll", onLenisScroll);
-    window.addEventListener("scroll", onNativeScroll, { passive: true });
-    return () => {
-      window.removeEventListener("lenis-scroll", onLenisScroll);
-      window.removeEventListener("scroll", onNativeScroll);
-    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const languages: { value: Locale; label: string; code: string }[] =
