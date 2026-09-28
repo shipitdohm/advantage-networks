@@ -338,7 +338,7 @@ export const de: Dictionary = {
     },
   },
   eventsPage: {
-    heading: "Aktivierungen in unseren Netzwerken.",
+    heading: "Aktivierungen in unseren Netzwerken",
     intro: "Jede Aktion, die wir innerhalb eines Netzwerks durchführen, wird hier dokumentiert.",
     emptyNote: "Weitere Events kommen hinzu, sobald neue Netzwerke und Markenpartnerschaften live gehen.",
     labels: {
@@ -348,7 +348,6 @@ export const de: Dictionary = {
       date: "Datum",
       pending: "Folgt",
     },
-    quotePending: "Hier folgt ein Zitat von einem Teilnehmer.",
     galleryTitle: "Impressionen",
     cta: {
       heading: "Aktivierung für dein Netzwerk oder deine Marke?",

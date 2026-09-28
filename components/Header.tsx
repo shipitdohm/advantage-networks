@@ -126,7 +126,7 @@ export function Header() {
               aria-label="Switch language"
               aria-haspopup="menu"
               aria-expanded={langOpen}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-pill border border-border-strong text-muted transition-colors hover:border-fg hover:text-fg"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-pill border-[1.5px] border-border-strong text-muted transition-colors hover:border-fg hover:text-fg"
             >
               <GlobeIcon />
             </button>

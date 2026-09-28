@@ -10,7 +10,7 @@ interface PhotoMarqueeProps {
 }
 
 // Slow, endless strip of tiles (two copies back to back, translated -50%).
-// Tiles keep each photo's own aspect ratio at a fixed height. Clicking one
+// Square-cornered tiles sit edge to edge at each photo's own aspect ratio. Clicking one
 // opens it large; the strip pauses on hover/focus.
 export function PhotoMarquee({ photos, alt, labels }: PhotoMarqueeProps) {
   const [open, setOpen] = useState<number | null>(null);
@@ -20,10 +20,6 @@ export function PhotoMarquee({ photos, alt, labels }: PhotoMarqueeProps) {
     <>
       <div
         className="photo-marquee relative w-full overflow-hidden motion-reduce:overflow-x-auto"
-        style={{
-          maskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
-          WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
-        }}
       >
         <div className="photo-marquee-track flex w-max motion-reduce:[animation:none]">
           {track.map((photo, i) => {
@@ -36,14 +32,14 @@ export function PhotoMarquee({ photos, alt, labels }: PhotoMarqueeProps) {
                 tabIndex={isCopy ? -1 : 0}
                 aria-hidden={isCopy || undefined}
                 aria-label={`${alt} ${(i % photos.length) + 1}`}
-                className="mr-4 h-[340px] shrink-0 overflow-hidden rounded-card border border-border-strong bg-surface-2 transition-transform duration-300 hover:scale-[1.015] md:h-[460px]"
+                className="block h-[240px] shrink-0 overflow-hidden bg-surface-2 md:h-[320px]"
                 style={{ aspectRatio: `${photo.w} / ${photo.h}` }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- static export, pre-sized responsive WebP */}
                 <img
                   src={photoSrc(photo.id, 640)}
                   srcSet={`${photoSrc(photo.id, 640)} 640w, ${photoSrc(photo.id, 1400)} ${photo.w}w`}
-                  sizes="(min-width: 768px) 368px, 272px"
+                  sizes="(min-width: 768px) 256px, 192px"
                   width={photo.w}
                   height={photo.h}
                   loading="lazy"
@@ -55,6 +51,15 @@ export function PhotoMarquee({ photos, alt, labels }: PhotoMarqueeProps) {
             );
           })}
         </div>
+        {/* Solid dark fade at both ends */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-bg to-transparent md:w-40"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-bg to-transparent md:w-40"
+        />
       </div>
 
       {open !== null && (

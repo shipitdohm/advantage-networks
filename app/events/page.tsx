@@ -48,7 +48,7 @@ function MetaCell({
   emphasis?: boolean;
 }) {
   return (
-    <div className={`flex flex-col justify-between gap-5 px-6 py-6 md:px-8 md:py-8 ${emphasis ? "bg-surface" : ""}`}>
+    <div className={`flex flex-col justify-between gap-5 px-5 py-5 md:px-6 ${emphasis ? "bg-surface" : ""}`}>
       <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">{label}</span>
       <div className="flex min-h-[44px] items-end">{children}</div>
     </div>
@@ -64,9 +64,9 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
 
   return (
     <article data-od-id="event-founder-padel-treff">
-      {/* Hero: story left, portrait video right */}
+      {/* Hero: story + facts left, portrait video right */}
       <section className="pb-16 md:pb-24">
-        <div className="container-content grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+        <div className="container-content grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <Reveal className="lg:pr-6">
             <div className="flex flex-wrap items-center gap-2">
               {cs.tags.map((tag, i) => {
@@ -88,6 +88,35 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
             </div>
             <h2 className="mt-6 font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">{cs.title}</h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">{cs.description}</p>
+
+            {/* Who / where / when */}
+            <div className="mt-10 grid grid-cols-2 overflow-hidden rounded-card border border-border-strong [&>*]:border-border-strong [&>*:nth-child(-n+2)]:border-b [&>*:nth-child(odd)]:border-r">
+              <MetaCell label={e.labels.network}>
+                <a href="https://foundersleague.de" target="_blank" rel="noopener noreferrer" aria-label={cs.network}>
+                  {network ? (
+                    <SafeLogo src={network.src} name={network.name} className="h-8" />
+                  ) : (
+                    <span className="font-display text-xl text-fg">{cs.network}</span>
+                  )}
+                </a>
+              </MetaCell>
+              <MetaCell label={e.labels.partner} emphasis>
+                <a href="https://www.garmin.com" target="_blank" rel="noopener noreferrer" aria-label={cs.partner}>
+                  <SafeLogo src="/brand/partners/garmin-2.svg" name={cs.partner} className="h-9" />
+                </a>
+              </MetaCell>
+              <MetaCell label={e.labels.location}>
+                <div className="flex flex-col gap-2">
+                  {venue && <SafeLogo src={venue.src} name={venue.name} className="h-7" />}
+                  <span className="text-sm text-fg">{cs.location}</span>
+                </div>
+              </MetaCell>
+              <MetaCell label={e.labels.date}>
+                <span className={`font-display text-xl ${cs.date ? "text-fg" : "text-muted"}`}>
+                  {cs.date ?? e.labels.pending}
+                </span>
+              </MetaCell>
+            </div>
           </Reveal>
 
           <Reveal delayMs={120} className="max-lg:order-first">
@@ -97,39 +126,6 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
               soundOnLabel={e.sound.on}
               soundOffLabel={e.sound.off}
             />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Who / where / when */}
-      <section className="pb-16 md:pb-24">
-        <div className="container-content">
-          <Reveal className="grid overflow-hidden rounded-card border border-border-strong sm:grid-cols-2 lg:grid-cols-4 [&>*]:border-border-strong max-lg:[&>*:not(:first-child)]:border-t sm:max-lg:[&>*:nth-child(even)]:border-l sm:max-lg:[&>*:nth-child(2)]:border-t-0 lg:[&>*:not(:first-child)]:border-l">
-            <MetaCell label={e.labels.network}>
-              <a href="https://foundersleague.de" target="_blank" rel="noopener noreferrer" aria-label={cs.network}>
-                {network ? (
-                  <SafeLogo src={network.src} name={network.name} className="h-9" />
-                ) : (
-                  <span className="font-display text-xl text-fg">{cs.network}</span>
-                )}
-              </a>
-            </MetaCell>
-            <MetaCell label={e.labels.partner} emphasis>
-              <a href="https://www.garmin.com" target="_blank" rel="noopener noreferrer" aria-label={cs.partner}>
-                <SafeLogo src="/brand/partners/garmin-2.svg" name={cs.partner} className="h-11" />
-              </a>
-            </MetaCell>
-            <MetaCell label={e.labels.location}>
-              <div className="flex flex-col gap-2">
-                {venue && <SafeLogo src={venue.src} name={venue.name} className="h-7" />}
-                <span className="text-sm text-fg">{cs.location}</span>
-              </div>
-            </MetaCell>
-            <MetaCell label={e.labels.date}>
-              <span className={`font-display text-xl ${cs.date ? "text-fg" : "text-muted"}`}>
-                {cs.date ?? e.labels.pending}
-              </span>
-            </MetaCell>
           </Reveal>
         </div>
       </section>
@@ -147,26 +143,6 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
               </Reveal>
             ))}
           </dl>
-        </div>
-      </section>
-
-      {/* Quote */}
-      <section className="pb-16 md:pb-24">
-        <div className="container-content">
-          <Reveal className="mx-auto max-w-3xl text-center">
-            {cs.quote ? (
-              <figure>
-                <blockquote className="font-display text-2xl font-medium leading-snug text-fg md:text-3xl">
-                  „{cs.quote.text}“
-                </blockquote>
-                <figcaption className="mt-5 text-sm text-muted">{cs.quote.author}</figcaption>
-              </figure>
-            ) : (
-              <p className="rounded-card border border-dashed border-border-strong px-6 py-8 text-sm text-muted">
-                {e.quotePending}
-              </p>
-            )}
-          </Reveal>
         </div>
       </section>
 
@@ -191,10 +167,10 @@ export default function EventsPage() {
     <>
       <section className="pt-32 pb-16 md:pt-40 md:pb-20" data-od-id="events-hero">
         <div className="container-content">
-          <h1 className="max-w-2xl font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
+          <h1 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">
             {e.heading}
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">{e.intro}</p>
+          <p className="mt-6 text-base leading-relaxed text-muted">{e.intro}</p>
         </div>
       </section>
 

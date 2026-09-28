@@ -78,7 +78,6 @@ export interface CaseStudy {
   date?: string;
   /** Leave `value` undefined until the number is confirmed — renders as a dash. */
   stats: { label: string; value?: number; suffix?: string }[];
-  quote?: { text: string; author: string };
   logos?: CaseStudyLogo[];
 }
 
@@ -202,7 +201,6 @@ export interface Dictionary {
       date: string;
       pending: string;
     };
-    quotePending: string;
     galleryTitle: string;
     cta: { heading: string; body: string; button: string };
     lightbox: { close: string; prev: string; next: string };

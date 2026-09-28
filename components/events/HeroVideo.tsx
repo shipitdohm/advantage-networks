@@ -10,8 +10,7 @@ interface HeroVideoProps {
 }
 
 // Phone footage is portrait, so it lives in a tall frame instead of being
-// cropped into a wide banner. A blurred copy of the poster behind it carries
-// the color out into the page.
+// cropped into a wide banner.
 export function HeroVideo({ src, poster, soundOnLabel, soundOffLabel }: HeroVideoProps) {
   const ref = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
@@ -29,12 +28,7 @@ export function HeroVideo({ src, poster, soundOnLabel, soundOffLabel }: HeroVide
   }
 
   return (
-    <div className="relative isolate mx-auto w-full max-w-[300px] md:max-w-[340px]">
-      <div
-        aria-hidden="true"
-        className="absolute -inset-10 -z-10 bg-cover bg-center opacity-50 blur-3xl"
-        style={{ backgroundImage: `url(${poster})` }}
-      />
+    <div className="relative mx-auto w-full max-w-[300px] md:max-w-[340px] lg:ml-auto lg:mr-0">
       <video
         ref={ref}
         src={src}
