@@ -56,15 +56,19 @@ export function WhatWeDo() {
           {t.whatWeDo.points.map((point, i) => {
             const icon = ICON_META[i % ICON_META.length];
             return (
-              // Each card fades/slides in as a whole, one after the other. The
-              // grid itself has no background, so nothing shows behind a card
-              // that has not appeared yet.
-              <Reveal
-                key={point.title}
-                delayMs={i * 200}
-                className="group flex flex-col rounded-card border border-border bg-surface p-8 transition-colors duration-300"
-              >
-                <div style={{ "--item-color": icon.color } as React.CSSProperties} className="contents">
+              // Each card fades/slides in as a whole, one after the other.
+              // The hover color-transition lives on the inner div, not the
+              // Reveal element itself — Tailwind's `transition-colors`
+              // utility and `.reveal`'s own `transition` shorthand both set
+              // `transition-property`, and Tailwind's utilities layer wins
+              // the cascade, which silently dropped opacity/transform from
+              // the list and made every card snap in at once instead of
+              // staggering.
+              <Reveal key={point.title} delayMs={i * 200}>
+                <div
+                  style={{ "--item-color": icon.color } as React.CSSProperties}
+                  className="group flex h-full flex-col rounded-card border border-border bg-surface p-8 transition-colors duration-300"
+                >
                   <div
                     className="flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundColor: `${icon.color}20` }}
