@@ -231,7 +231,7 @@ export const de: Dictionary = {
         network: "Founders League",
         title: "Founder Padel Treff",
         description:
-          "Ein Community-Padel-Event für das Founders-League-Netzwerk, auf den Rooftop-Courts von TIO TIO in Berlin-Friedrichshain, unterstützt mit Garmin-Uhren — Markenaktivierung und Mitglieder-Zugang in einem Event, ganz ohne öffentliches Listing.",
+          "Ein Community-Padel-Event für das Founders-League-Netzwerk, auf den Rooftop-Courts von TIO TIO in Berlin-Friedrichshain, unterstützt mit Garmin-Uhren.",
         tags: ["Founders League", "Community-Aktion", "Marken-Sponsoring"],
         location: "TIO TIO · Berlin-Friedrichshain",
         stats: [

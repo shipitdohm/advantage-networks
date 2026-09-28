@@ -231,7 +231,7 @@ export const en: Dictionary = {
         network: "Founders League",
         title: "Founder Padel Treff",
         description:
-          "A community padel event for the Founders League network, held on the rooftop courts at TIO TIO in Berlin-Friedrichshain and sponsored with Garmin watches — brand activation and member deal-access in one event, without a single public listing.",
+          "A community padel event for the Founders League network, held on the rooftop courts at TIO TIO in Berlin-Friedrichshain and sponsored with Garmin watches.",
         tags: ["Founders League", "Community activation", "Brand sponsorship"],
         location: "TIO TIO · Berlin-Friedrichshain",
         stats: [

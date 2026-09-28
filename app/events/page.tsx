@@ -57,7 +57,7 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
   return (
     <article data-od-id="event-founder-padel-treff">
       {/* Hero: story + facts left, portrait video right */}
-      <section className="pb-16 md:pb-24">
+      <section className="pt-4 pb-16 md:pt-8 md:pb-24">
         <div className="container-content grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <Reveal className="lg:pr-6">
             <div className="flex flex-wrap items-center gap-2">
@@ -139,7 +139,7 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
       </section>
 
       {/* Gallery */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-28 md:pb-40">
         <PhotoMarquee photos={FPT_PHOTOS} alt={`${cs.title} — ${e.galleryTitle}`} />
       </section>
     </article>
@@ -165,7 +165,7 @@ export default function EventsPage() {
         <EventFeature key={cs.title} cs={cs} />
       ))}
 
-      <section className="py-20 md:py-28" data-od-id="events-cta">
+      <section className="pt-4 pb-20 md:pt-8 md:pb-28" data-od-id="events-cta">
         <div className="container-content">
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-fg md:text-4xl">{e.cta.heading}</h2>
@@ -173,7 +173,6 @@ export default function EventsPage() {
             <Link href="/contact" className="btn-primary mt-8 inline-flex">
               {e.cta.button}
             </Link>
-            <p className="mt-10 text-sm text-muted">{e.emptyNote}</p>
           </Reveal>
         </div>
       </section>
