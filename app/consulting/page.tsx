@@ -4,6 +4,16 @@ import { useState, type FormEvent } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
 
+function ImagePlaceholderIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M21 15l-5.5-5.5L6 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function SearchIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -141,7 +151,25 @@ export default function ConsultingPage() {
             </div>
           </Reveal>
 
-          <p className="mt-8 text-xs text-muted">{c.note}</p>
+          <Reveal delayMs={120} className="mt-14 border-t border-border pt-14 md:mt-16 md:pt-16">
+            <span className="eyebrow">{c.caseStudies.eyebrow}</span>
+            <h3 className="mt-4 font-display text-xl font-medium tracking-[-0.01em] text-fg md:text-2xl">
+              {c.caseStudies.heading}
+            </h3>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{c.note}</p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {c.caseStudies.placeholders.map((label) => (
+                <div
+                  key={label}
+                  className="flex aspect-[4/3] flex-col items-center justify-center gap-3 rounded-card border border-border-strong bg-surface-2 text-muted/50"
+                >
+                  <ImagePlaceholderIcon />
+                  <span className="text-xs font-medium tracking-wide text-muted">{label}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 

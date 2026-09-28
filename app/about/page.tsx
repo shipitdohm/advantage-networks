@@ -63,6 +63,49 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="pb-16 md:pb-24" data-od-id="about-team">
+        <div className="container-content">
+          <span className="eyebrow">{t.aboutPage.team.eyebrow}</span>
+          <h2 className="mt-4 max-w-xl font-display text-2xl font-medium tracking-[-0.01em] text-fg md:text-3xl">
+            {t.aboutPage.team.heading}
+          </h2>
+
+          <Reveal className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4" as="div">
+            {t.aboutPage.team.members.map((member) => {
+              const content = (
+                <>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- static avatar, no optimization needed */}
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="h-20 w-20 rounded-full object-cover ring-1 ring-border-strong"
+                  />
+                  <div>
+                    <h3 className="font-display text-sm font-medium text-fg">{member.name}</h3>
+                    <p className="mt-0.5 text-xs text-muted">{member.role}</p>
+                  </div>
+                </>
+              );
+              return member.linkedin ? (
+                <a
+                  key={member.name}
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card flex flex-col items-start gap-4 p-6 transition-transform hover:-translate-y-0.5"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={member.name} className="card flex flex-col items-start gap-4 p-6">
+                  {content}
+                </div>
+              );
+            })}
+          </Reveal>
+        </div>
+      </section>
+
       <section className="pb-24 md:pb-32" data-od-id="about-locations">
         <div className="container-content">
           <span className="eyebrow">{t.aboutPage.locations.eyebrow}</span>

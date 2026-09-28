@@ -44,7 +44,7 @@ export const en: Dictionary = {
     points: [
       {
         title: "Exclusive conditions",
-        body: "Not public, not comparable. Prices for verified members only — up to 25% below market price thanks to direct partnerships with manufacturers.",
+        body: "Not public, not comparable. Prices for verified members only — well below market price thanks to direct partnerships with manufacturers.",
       },
       {
         title: "Community-focused",
@@ -171,16 +171,16 @@ export const en: Dictionary = {
             "Founding is hard enough. With Advantage Networks, Founders League members get conditions only volume can unlock. We work directly with the League to bring member-only hardware pricing into the benefits founders already rely on.",
           bodyParagraphs: [
             "Startups need the best equipment from day one — laptops, monitors, servers, networking. But without volume, they don't get enterprise-level conditions.",
-            "With Advantage Networks, every Founders League member taps into the combined purchasing power of the whole community — and gets 15–25% off, automatically.",
+            "With Advantage Networks, every Founders League member taps into the combined purchasing power of the whole community — and gets better conditions automatically.",
             "It's a close, ongoing partnership: as the League grows, so does the community's combined purchasing power — and the conditions get better for everyone in it.",
           ],
           ctaLabel: "Request Partnership",
           ctaHref: "/contact",
           statsPanelTitle: "Partnership Status",
           stats: [
-            { label: "Status", value: "In discussion" },
+            { label: "Status", value: "Active" },
             { label: "Audience", value: "Founders & teams" },
-            { label: "Savings", value: "15–25%" },
+            { label: "Advantage", value: "Combined purchasing power" },
             { label: "Payment", value: "Invoice, card, VAT ID" },
             { label: "Model", value: "B2B procurement" },
           ],
@@ -313,6 +313,12 @@ export const en: Dictionary = {
     body: "Advantage Networks' login-gated shop is in development. Members of a private network will sign in here to access exclusive pricing — for now, this is a placeholder.",
     backLabel: "Back to home",
   },
+  notFoundPage: {
+    eyebrow: "404",
+    heading: "This page doesn't exist.",
+    body: "That link is either outdated or mistyped. Everything else is a click away from the homepage.",
+    backLabel: "Back to home",
+  },
   channelsPage: {
     eyebrow: "Channels",
     heading: "Every network, in depth.",
@@ -326,7 +332,7 @@ export const en: Dictionary = {
   },
   eventsPage: {
     eyebrow: "Events",
-    heading: "Track record across every network.",
+    heading: "Activations across our networks.",
     intro: "Every activation we run inside a network, documented here as it happens.",
     emptyNote: "More events are added as networks and brand partnerships go live.",
     mediaLabel: "Event photos & video — coming soon",
@@ -378,6 +384,11 @@ export const en: Dictionary = {
         ],
       },
     },
+    caseStudies: {
+      eyebrow: "References",
+      heading: "Selected projects.",
+      placeholders: ["Logistics", "Hospitality", "Coworking"],
+    },
     cta: {
       heading: "Have a digital transformation project in mind?",
       body: "Tell us what you're working on — we'll get back to you to talk through the right engagement.",
@@ -422,6 +433,13 @@ export const en: Dictionary = {
         body: "That insight became Advantage Networks — applying the same private-network model to distributing consumer electronics through the Helium Network, Founders League, and Alumni Network.",
       },
     ],
+    team: {
+      eyebrow: "The team",
+      heading: "The people behind Advantage Networks.",
+      members: [
+        { name: "Konrad Rettig", role: "CEO & Founder", photo: "/team/konrad-rettig.svg", linkedin: "https://www.linkedin.com/in/konrad-rettig-540720227/" },
+      ],
+    },
     locations: {
       eyebrow: "Where we are",
       heading: "Based in Munich, with a presence across Germany.",

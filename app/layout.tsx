@@ -14,12 +14,28 @@ const inter = Inter({
   display: "swap",
 });
 
+const title = "Advantage Networks — Elevate your Connectivity";
+const description =
+  "Advantage Networks distributes consumer electronics exclusively through private, invite-only member networks.";
+
 export const metadata: Metadata = {
-  title: "Advantage Networks — Elevate your Connectivity",
-  description:
-    "Advantage Networks distributes consumer electronics exclusively through private, invite-only member networks.",
+  metadataBase: new URL("https://www.advantage-net.com"),
+  title,
+  description,
   icons: {
     icon: "/icon.svg",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "https://www.advantage-net.com",
+    siteName: "Advantage Networks",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 

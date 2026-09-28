@@ -169,6 +169,12 @@ export interface Dictionary {
     body: string;
     backLabel: string;
   };
+  notFoundPage: {
+    eyebrow: string;
+    heading: string;
+    body: string;
+    backLabel: string;
+  };
   channelsPage: {
     eyebrow: string;
     heading: string;
@@ -201,6 +207,11 @@ export interface Dictionary {
       ours: { title: string; points: string[] };
       yours: { title: string; points: string[] };
     };
+    caseStudies: {
+      eyebrow: string;
+      heading: string;
+      placeholders: string[];
+    };
     cta: {
       heading: string;
       body: string;
@@ -217,6 +228,11 @@ export interface Dictionary {
     heading: string;
     intro: string;
     timeline: { year: string; title: string; body: string }[];
+    team: {
+      eyebrow: string;
+      heading: string;
+      members: { name: string; role: string; photo: string; linkedin?: string }[];
+    };
     locations: {
       eyebrow: string;
       heading: string;

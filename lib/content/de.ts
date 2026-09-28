@@ -44,7 +44,7 @@ export const de: Dictionary = {
     points: [
       {
         title: "Exklusive Konditionen",
-        body: "Nicht öffentlich, nicht vergleichbar. Preise nur für verifizierte Mitglieder – bis zu 25% unter Marktpreis dank direkter Partnerschaften mit Herstellern.",
+        body: "Nicht öffentlich, nicht vergleichbar. Preise nur für verifizierte Mitglieder – deutlich unter Marktpreis dank direkter Partnerschaften mit Herstellern.",
       },
       {
         title: "Community-fokussiert",
@@ -171,16 +171,16 @@ export const de: Dictionary = {
             "Gründen ist hart genug. Mit Advantage Networks bekommen Founders League Members Konditionen, die nur mit Volumen erreichbar sind. Wir arbeiten direkt mit der League zusammen, um Hardware-Konditionen für Members in die Benefits einzubauen, auf die Founder ohnehin schon zählen.",
           bodyParagraphs: [
             "Startups brauchen von Tag 1 das beste Equipment: Laptops, Monitore, Server, Netzwerk. Aber ohne Volumen kommen sie nicht an Unternehmenskonditionen.",
-            "Mit Advantage Networks nutzen alle Founders League Members die gebündelte Kaufkraft der gesamten Community – und erhalten 15–25% Rabatt automatisch.",
+            "Mit Advantage Networks nutzen alle Founders League Members die gebündelte Kaufkraft der gesamten Community – und erhalten automatisch bessere Konditionen.",
             "Es ist eine enge, laufende Partnerschaft: Je mehr die League wächst, desto größer wird die gebündelte Kaufkraft der Community – und die Konditionen werden für alle besser.",
           ],
           ctaLabel: "Partnerschaft anfragen",
           ctaHref: "/contact",
           statsPanelTitle: "Partnership Status",
           stats: [
-            { label: "Status", value: "In Gesprächen" },
+            { label: "Status", value: "Aktiv" },
             { label: "Zielgruppe", value: "Gründer & Teams" },
-            { label: "Ersparnis", value: "15–25%" },
+            { label: "Vorteil", value: "Gebündelte Kaufkraft" },
             { label: "Zahlungsarten", value: "Rechnung, Karte, USt-ID" },
             { label: "Modell", value: "B2B Procurement" },
           ],
@@ -313,6 +313,12 @@ export const de: Dictionary = {
     body: "Der Login-geschützte Shop von Advantage Networks befindet sich in Entwicklung. Mitglieder eines privaten Netzwerks melden sich hier für exklusive Preise an — aktuell ist dies ein Platzhalter.",
     backLabel: "Zurück zur Startseite",
   },
+  notFoundPage: {
+    eyebrow: "404",
+    heading: "Diese Seite gibt es nicht.",
+    body: "Der Link ist entweder veraltet oder falsch geschrieben. Von der Startseite aus findest du alles.",
+    backLabel: "Zurück zur Startseite",
+  },
   channelsPage: {
     eyebrow: "Channels",
     heading: "Jedes Netzwerk im Detail.",
@@ -326,7 +332,7 @@ export const de: Dictionary = {
   },
   eventsPage: {
     eyebrow: "Events",
-    heading: "Track Record über alle Netzwerke.",
+    heading: "Aktivierungen in unseren Netzwerken.",
     intro: "Jede Aktion, die wir innerhalb eines Netzwerks durchführen, wird hier dokumentiert.",
     emptyNote: "Weitere Events kommen hinzu, sobald neue Netzwerke und Markenpartnerschaften live gehen.",
     mediaLabel: "Event-Fotos & Video — folgen in Kürze",
@@ -378,6 +384,11 @@ export const de: Dictionary = {
         ],
       },
     },
+    caseStudies: {
+      eyebrow: "Referenzen",
+      heading: "Ausgewählte Projekte.",
+      placeholders: ["Logistik", "Gastronomie", "Coworking"],
+    },
     cta: {
       heading: "Hast du ein Digitalisierungsprojekt im Kopf?",
       body: "Erzähl uns, woran du arbeitest — wir melden uns bei dir, um das passende Vorgehen zu besprechen.",
@@ -422,6 +433,13 @@ export const de: Dictionary = {
         body: "Aus dieser Erkenntnis wurde Advantage Networks — dasselbe Modell privater Netzwerke, angewendet auf den Vertrieb von Consumer Electronics über Helium Network, Founders League und Alumni Network.",
       },
     ],
+    team: {
+      eyebrow: "Das Team",
+      heading: "Die Menschen hinter Advantage Networks.",
+      members: [
+        { name: "Konrad Rettig", role: "CEO & Founder", photo: "/team/konrad-rettig.svg", linkedin: "https://www.linkedin.com/in/konrad-rettig-540720227/" },
+      ],
+    },
     locations: {
       eyebrow: "Wo wir sind",
       heading: "Zuhause in München — mit Präsenz in Berlin und Düsseldorf.",

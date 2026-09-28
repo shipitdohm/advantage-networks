@@ -1,12 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useState, type FormEvent } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
 
 export function FinalCta() {
   const { t } = useLanguage();
   const { form } = t.finalCta;
+  const [email, setEmail] = useState("");
+  const [member, setMember] = useState("");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Advantage Networks — ${member || form.memberPlaceholder}`);
+    const body = encodeURIComponent(`Email: ${email}\n${form.memberLabel} ${member || "—"}`);
+    window.location.href = `mailto:${t.contactPage.email}?subject=${subject}&body=${body}`;
+  };
 
   return (
     <section id="access" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32" data-od-id="final-cta">
@@ -19,7 +29,7 @@ export function FinalCta() {
 
         <Reveal delayMs={100} className="mx-auto mt-14 max-w-3xl md:mt-16">
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
             className="card flex flex-col gap-4 p-6 md:flex-row md:items-end md:gap-3 md:p-4"
           >
             <div className="md:flex-1">
@@ -29,6 +39,9 @@ export function FinalCta() {
               <input
                 id="cta-email"
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={form.emailPlaceholder}
                 className="mt-1.5 w-full rounded-lg border border-border-strong bg-surface px-4 py-2.5 text-sm text-fg placeholder:text-muted focus:border-accent focus:outline-none"
               />
@@ -40,7 +53,9 @@ export function FinalCta() {
               <div className="relative mt-1.5">
                 <select
                   id="cta-member"
-                  defaultValue=""
+                  required
+                  value={member}
+                  onChange={(e) => setMember(e.target.value)}
                   className="w-full appearance-none rounded-lg border border-border-strong bg-surface px-4 py-2.5 pr-9 text-sm text-fg focus:border-accent focus:outline-none"
                 >
                   <option value="" disabled>
