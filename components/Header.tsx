@@ -101,7 +101,7 @@ export function Header() {
           <img src="/brand/logo/IconWhite.svg" alt="Advantage Networks" className="h-7 w-auto" />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {t.nav.links.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
             return (
@@ -119,14 +119,14 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div ref={langRef} className="relative hidden sm:block">
+          <div ref={langRef} className="relative hidden lg:block">
             <button
               type="button"
               onClick={() => setLangOpen((v) => !v)}
               aria-label="Switch language"
               aria-haspopup="menu"
               aria-expanded={langOpen}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-pill border-[1.5px] border-border-strong text-muted transition-colors hover:border-fg hover:text-fg"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-pill border-2 border-border-strong text-muted transition-colors hover:border-fg hover:text-fg"
             >
               <GlobeIcon />
             </button>
@@ -166,13 +166,13 @@ export function Header() {
 
           <div
             ref={shopRef}
-            className="relative hidden sm:block"
+            className="relative hidden lg:block"
             onMouseLeave={() => setShopOpen(false)}
           >
             <div className="flex items-stretch rounded-pill bg-accent">
               <Link
                 href="/shop"
-                className="flex items-center rounded-l-pill px-6 py-3 text-sm font-semibold text-accent-on"
+                className="flex items-center whitespace-nowrap rounded-l-pill px-6 py-3 text-sm font-semibold text-accent-on"
               >
                 {t.nav.shop}
               </Link>
@@ -223,7 +223,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-pill border border-border-strong text-fg md:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-pill border border-border-strong text-fg lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -241,7 +241,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="liquid-glass mt-2 rounded-card md:hidden">
+        <div className="liquid-glass mt-2 rounded-card lg:hidden">
           <nav className="flex flex-col gap-1 px-4 py-4">
             {t.nav.links.map((link) => (
               <Link

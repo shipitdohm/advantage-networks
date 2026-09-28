@@ -60,8 +60,8 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
                     key={tag}
                     className="rounded-pill border px-2.5 py-1 text-[11px] font-medium"
                     style={{
-                      borderColor: `color-mix(in oklch, ${color} 55%, var(--bg))`,
-                      backgroundColor: `color-mix(in oklch, ${color} 26%, var(--bg))`,
+                      borderColor: `color-mix(in oklch, ${color} 45%, transparent)`,
+                      backgroundColor: `color-mix(in oklch, ${color} 14%, transparent)`,
                       color,
                     }}
                   >
@@ -90,14 +90,17 @@ function EventFeature({ cs }: { cs: CaseStudy }) {
                 </a>
               </MetaCell>
               <MetaCell label={e.labels.location}>
-                <div className="flex flex-col gap-2">
-                  {venue && <SafeLogo src={venue.src} name={venue.name} className="h-7" />}
-                  <span className="text-sm text-fg">{cs.location}</span>
-                </div>
+                <a href="https://tiotio.club/" target="_blank" rel="noopener noreferrer" aria-label={cs.location}>
+                  {venue ? (
+                    <SafeLogo src={venue.src} name={venue.name} className="h-8" />
+                  ) : (
+                    <span className="font-display text-xl text-fg">{cs.location}</span>
+                  )}
+                </a>
               </MetaCell>
               <MetaCell label={e.labels.date}>
                 <span className={`font-display text-xl ${cs.date ? "text-fg" : "text-muted"}`}>
-                  {cs.date ?? e.labels.pending}
+                  {cs.date ?? "XX.XX.XXXX"}
                 </span>
               </MetaCell>
             </div>

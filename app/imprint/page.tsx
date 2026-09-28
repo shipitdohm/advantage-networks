@@ -6,7 +6,7 @@ const CONTENT = {
   en: {
     eyebrow: "Legal",
     heading: "Imprint",
-    note: "Placeholder content — to be finalized and reviewed with legal counsel before launch.",
+    note: "Placeholder content, to be finalized and reviewed with legal counsel before launch.",
     sections: [
       {
         title: "Information pursuant to § 5 TMG",
@@ -44,7 +44,7 @@ const CONTENT = {
       {
         title: "Liability for links",
         body: [
-          "Our site contains links to external third-party websites over whose content we have no influence. We therefore cannot accept liability for this external content — the respective provider or operator is always responsible.",
+          "Our site contains links to external third-party websites over whose content we have no influence. We therefore cannot accept liability for this external content; the respective provider or operator is always responsible.",
         ],
       },
       {
@@ -58,7 +58,7 @@ const CONTENT = {
   de: {
     eyebrow: "Rechtliches",
     heading: "Impressum",
-    note: "Platzhalter-Inhalt — vor Veröffentlichung final zu prüfen, idealerweise mit rechtlicher Beratung.",
+    note: "Platzhalter-Inhalt, vor Veröffentlichung final zu prüfen, idealerweise mit rechtlicher Beratung.",
     sections: [
       {
         title: "Angaben gemäß § 5 TMG",
@@ -96,7 +96,7 @@ const CONTENT = {
       {
         title: "Haftung für Links",
         body: [
-          "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte können wir daher keine Gewähr übernehmen — verantwortlich ist stets der jeweilige Anbieter der Seite.",
+          "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte können wir daher keine Gewähr übernehmen; verantwortlich ist stets der jeweilige Anbieter der Seite.",
         ],
       },
       {

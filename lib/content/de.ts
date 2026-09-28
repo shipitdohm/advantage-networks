@@ -6,9 +6,9 @@ import type { Dictionary } from "./types";
 
 export const de: Dictionary = {
   meta: {
-    title: "Advantage Networks — Exklusiver Zugang zu Consumer Electronics über private Netzwerke",
+    title: "Advantage Networks",
     description:
-      "Advantage Networks bietet exklusiven Zugang zu Consumer-Electronics-Produkten über private, einladungsbasierte Mitglieder-Netzwerke — starke Konditionen für Mitglieder, vertrauensvolle Partnerschaften für Marken.",
+      "Advantage Networks bietet exklusiven Zugang zu Consumer-Electronics-Produkten über private, einladungsbasierte Mitglieder-Netzwerke.",
   },
   nav: {
     links: [
@@ -44,11 +44,11 @@ export const de: Dictionary = {
     points: [
       {
         title: "Exklusive Konditionen",
-        body: "Nicht öffentlich, nicht vergleichbar. Attraktive Preise nur für verifizierte Mitglieder – möglich durch direkte Partnerschaften mit Herstellern.",
+        body: "Nicht öffentlich, nicht vergleichbar. Attraktive Preise nur für verifizierte Mitglieder.",
       },
       {
         title: "Community-fokussiert",
-        body: "Jede Community bekommt ihren eigenen Zugang, ihre eigenen Vorteile und ihre eigene Story. Helium, Founders League, Alumni – maßgeschneidert.",
+        body: "Jede Community bekommt ihren eigenen Zugang, ihre eigenen Vorteile und ihre eigene Story.",
       },
       {
         title: "Token-native Zahlung",
@@ -63,11 +63,11 @@ export const de: Dictionary = {
   howItWorks: {
     eyebrow: "So funktioniert's",
     heading: "In vier Schritten zu deinem Vorteil.",
-    intro: "Von der Community-Mitgliedschaft bis zur ersten exklusiven Bestellung — das ist der Weg.",
+    intro: "Von der Community-Mitgliedschaft bis zur ersten exklusiven Bestellung.",
     steps: [
       {
         title: "Netzwerk-Mitglied sein",
-        body: "Helium-Hotspot betreiben, Mitglied der Founders League oder Teil des Alumni-Netzwerks sein — jede unserer Partner-Communities öffnet die Tür zum Shop.",
+        body: "Jede unserer Partner-Communities öffnet dir die Tür zum Shop.",
       },
       {
         title: "Zugang beantragen",
@@ -79,7 +79,7 @@ export const de: Dictionary = {
       },
       {
         title: "Netzwerk stärken",
-        body: "Jeder Kauf stärkt das Ökosystem — bessere Hardware, stärkere Setups, eine wachsende Community.",
+        body: "Jeder Kauf stärkt das Ökosystem.",
       },
     ],
   },
@@ -112,7 +112,7 @@ export const de: Dictionary = {
     eyebrow: "Die Netzwerke",
     heading: "Drei Netzwerke. Ein Zugang.",
     intro:
-      "Jedes Netzwerk ist eine eigene geschlossene Community mit eigenem Login-geschütztem Shop — gleiche verhandelte Konditionen, unterschiedliche Mitgliedschaft.",
+      "Jedes Netzwerk ist eine eigene geschlossene Community mit eigenem Login-geschütztem Shop.",
     activeLabel: "Aktiv",
     launchingLabel: "Startet bald",
     websiteLabel: "Website besuchen",
@@ -122,16 +122,16 @@ export const de: Dictionary = {
         name: "Helium Network",
         tagline: "Der Ursprung",
         description:
-          "Das ursprüngliche Netzwerk — die größte dezentrale Community, die wir bedienen, und die, die unser Modell des privaten Zugangs bewiesen hat.",
+          "Das ursprüngliche Netzwerk: die größte dezentrale Community, die wir bedienen, und die, die unser Modell des privaten Zugangs bewiesen hat.",
         status: "Gründungsnetzwerk",
         href: "/channels#helium-network",
         detail: {
           subheadline:
-            "Das schnellstwachsende dezentrale IoT-Netzwerk der Welt – und der Ausgangspunkt von Advantage Networks. Hier haben Hotspot-Betreiber zum ersten Mal verdiente HNT in echten Hardware-Wert verwandelt, und hier ist unser Modell des privaten Zugangs entstanden. Bis heute ist es unsere größte und ursprüngliche Community.",
+            "Das schnellstwachsende dezentrale IoT-Netzwerk der Welt. Hier haben Hotspot-Betreiber zum ersten Mal verdiente HNT in echten Hardware-Wert verwandelt, und hier ist unser Modell des privaten Zugangs entstanden. Bis heute ist es unsere größte und ursprüngliche Community.",
           bodyParagraphs: [
             "Helium ist ein dezentrales IoT-Netzwerk, das von der Community betrieben wird. Hotspot-Betreiber verdienen HNT-Token für die Bereitstellung der Netzwerk-Infrastruktur.",
-            "Mit Advantage Networks können Helium-Betreiber ihre verdiente HNT direkt gegen Premium-IT-Hardware einlösen – zu attraktiven Mitgliederkonditionen.",
-            "Advantage Networks ist innerhalb dieser Community entstanden — gebaut von und für Helium-Betreiber, bevor wir auf Founders League und Alumni erweitert haben. Dieser Ursprung prägt bis heute, wie eng wir mit dem Netzwerk zusammenarbeiten.",
+            "Mit Advantage Networks können Helium-Betreiber ihre verdiente HNT direkt gegen Premium-IT-Hardware einlösen.",
+            "Advantage Networks ist innerhalb dieser Community entstanden. Dieser Ursprung prägt bis heute, wie eng wir mit dem Netzwerk zusammenarbeiten.",
           ],
           ctaLabel: "Shop-Zugang beantragen",
           ctaHref: "/shop",
@@ -146,7 +146,7 @@ export const de: Dictionary = {
           ],
           embed: {
             title: "Live Helium Network Map",
-            note: "Live-Hotspot-Abdeckung auf Helium World erkunden — öffnet sich in einem neuen Tab.",
+            note: "Live-Hotspot-Abdeckung auf Helium World erkunden.",
             url: "https://world.helium.com/en/network/mobile",
           },
           websiteUrl: "https://www.helium.com",
@@ -165,8 +165,8 @@ export const de: Dictionary = {
             "Gründen ist hart genug. Mit Advantage Networks bekommen Founders League Members Konditionen, die nur mit Volumen erreichbar sind. Wir arbeiten direkt mit der League zusammen, um Hardware-Konditionen für Members in die Benefits einzubauen, auf die Founder ohnehin schon zählen.",
           bodyParagraphs: [
             "Startups brauchen von Tag 1 das beste Equipment: Laptops, Monitore, Server, Netzwerk. Aber ohne Volumen kommen sie nicht an Unternehmenskonditionen.",
-            "Mit Advantage Networks nutzen alle Founders League Members die gebündelte Kaufkraft der gesamten Community – und erhalten automatisch bessere Konditionen.",
-            "Es ist eine enge, laufende Partnerschaft: Je mehr die League wächst, desto größer wird die gebündelte Kaufkraft der Community – und die Konditionen werden für alle besser.",
+            "Mit Advantage Networks nutzen alle Founders League Members die gebündelte Kaufkraft der gesamten Community.",
+            "Es ist eine enge, laufende Partnerschaft: Je mehr die League wächst, desto größer wird die gebündelte Kaufkraft der Community.",
           ],
           ctaLabel: "Partnerschaft anfragen",
           ctaHref: "/contact",
@@ -186,7 +186,7 @@ export const de: Dictionary = {
         name: "Alumni Network",
         tagline: "Neuester Channel",
         description:
-          "Unser neuestes Netzwerk — erweitert Mitgliederkonditionen auf Alumni-Communities und deren Absolventen. Onboarding läuft.",
+          "Unser neuestes Netzwerk. Es erweitert Mitgliederkonditionen auf Alumni-Communities und deren Absolventen. Onboarding läuft.",
         status: "Im Aufbau",
         href: "/channels#alumni-network",
         isLaunching: true,
@@ -195,8 +195,8 @@ export const de: Dictionary = {
             "Alumni-Mitgliedschaft mit echtem Mehrwert: Exklusive IT-Konditionen als dauerhafter Benefit für Privatpersonen und Unternehmen. Wir arbeiten direkt mit Alumni-Organisationen zusammen, um aus der Mitgliedschaft einen Benefit zu machen, den Menschen wirklich nutzen.",
           bodyParagraphs: [
             "Die meisten Alumni-Programme bieten Events und Newsletter. Das ist wichtig, reicht aber nicht. Advantage Networks gibt Alumni-Organisationen die Möglichkeit, ihren Mitgliedern einen Benefit zu bieten, der täglich relevant ist.",
-            "Exklusive Hardware-Konditionen für Privatpersonen und Unternehmen – dauerhaft, solange sie im Alumni-Netzwerk sind.",
-            "Das ist eine frühe, enge Partnerschaft — wir bauen das Modell gemeinsam mit Alumni-Organisationen auf, während das Netzwerk wächst.",
+            "Exklusive Hardware-Konditionen für Privatpersonen und Unternehmen.",
+            "Das ist eine frühe, enge Partnerschaft.",
           ],
           ctaLabel: "Partnerschaft anfragen",
           ctaHref: "/contact",
@@ -216,7 +216,7 @@ export const de: Dictionary = {
   trackRecord: {
     eyebrow: "Track Record",
     heading: "Was in den Netzwerken bereits passiert ist.",
-    intro: "Ein erster Eintrag — diese Liste wächst mit jedem neuen Netzwerk und jeder Markenpartnerschaft.",
+    intro: "Diese Liste wächst mit jedem neuen Netzwerk und jeder Markenpartnerschaft.",
     caseStudies: [
       {
         partner: "Garmin",
@@ -243,7 +243,7 @@ export const de: Dictionary = {
   whyNow: {
     eyebrow: "Warum jetzt",
     heading: "Öffentlicher Preisvergleich hat Handelsmargen zerstört. Private Netzwerke korrigieren den Anreiz.",
-    body: "Wenn jeder Preis öffentlich ist, konkurrieren Marken über Rabatt statt über Beziehung. Private, kuratierte Netzwerke lassen Marken Preise schützen und trotzdem echtes Volumen bewegen — und Mitglieder profitieren von attraktiven, exklusiven Konditionen.",
+    body: "Wenn jeder Preis öffentlich ist, konkurrieren Marken über Rabatt statt über Beziehung. Private, kuratierte Netzwerke lassen Marken Preise schützen und trotzdem echtes Volumen bewegen.",
     points: [
       {
         title: "Handelsmargen stehen unter Dauerdruck",
@@ -251,11 +251,11 @@ export const de: Dictionary = {
       },
       {
         title: "Communities sind längst der Zugangsweg",
-        body: "Menschen kaufen bereits über Netzwerke, denen sie vertrauen — wir formalisieren das als Kanal.",
+        body: "Menschen kaufen bereits über Netzwerke, denen sie vertrauen.",
       },
       {
         title: "Dezentraler Ursprung, kommerzielle Anwendung",
-        body: "Das Modell begann in der dezentralen Community-Struktur des Helium Network — heute angewendet auf Consumer Electronics.",
+        body: "Das Modell begann in der dezentralen Community-Struktur des Helium Network. Heute wird es auf Consumer Electronics angewendet.",
       },
     ],
   },
@@ -280,7 +280,7 @@ export const de: Dictionary = {
     },
   },
   footer: {
-    tagline: "Consumer Electronics — exklusiver Zugang über die Netzwerke, denen du vertraust.",
+    tagline: "Consumer Electronics, exklusiver Zugang über die Netzwerke, denen du vertraust.",
     columns: [
       {
         title: "Unternehmen",
@@ -309,7 +309,7 @@ export const de: Dictionary = {
   shopPage: {
     eyebrow: "Demnächst",
     heading: "Der Shop wird gerade gebaut.",
-    body: "Der Login-geschützte Shop von Advantage Networks befindet sich in Entwicklung. Mitglieder eines privaten Netzwerks melden sich hier für exklusive Preise an — aktuell ist dies ein Platzhalter.",
+    body: "Der Login-geschützte Shop von Advantage Networks befindet sich in Entwicklung. Mitglieder eines privaten Netzwerks melden sich hier für exklusive Preise an.",
     backLabel: "Zurück zur Startseite",
   },
   notFoundPage: {
@@ -343,7 +343,7 @@ export const de: Dictionary = {
     galleryTitle: "Impressionen",
     cta: {
       heading: "Aktivierung für dein Netzwerk oder deine Marke?",
-      body: "Wir entwickeln Events wie dieses gemeinsam mit Communities und Marken — nah an den Mitgliedern, ohne öffentliches Listing.",
+      body: "Wir entwickeln Events wie dieses gemeinsam mit Communities und Marken.",
       button: "Gespräch anfragen",
     },
     sound: { on: "Ton an", off: "Ton aus" },
@@ -352,12 +352,12 @@ export const de: Dictionary = {
     eyebrow: "Beratung",
     heading: "Wir navigieren Organisationen durch die Herausforderungen der digitalen Transformation.",
     intro:
-      "Neben den Netzwerken, die wir selbst betreiben, beraten wir Organisationen auch direkt beim Aufbau dezentraler Netzwerk-Infrastruktur — von der Bedarfsanalyse bis zum laufenden Support.",
-    note: "Das sind vertrauliche Kundenprojekte — hier nach Leistungsart gezeigt, nicht namentlich.",
+      "Neben den Netzwerken, die wir selbst betreiben, beraten wir Organisationen auch direkt beim Aufbau dezentraler Netzwerk-Infrastruktur.",
+    note: "Das sind vertrauliche Kundenprojekte, hier nach Leistungsart gezeigt, nicht namentlich.",
     services: [
       {
         title: "Bedarfsanalyse & Beratung",
-        body: "Wir starten mit einer gründlichen Bedarfsanalyse — Standort, vorhandene Netzwerkverfügbarkeit, gewünschte Abdeckung und geplante Anwendung — bevor wir eine maßgeschneiderte Lösung entwickeln.",
+        body: "Wir starten mit einer gründlichen Bedarfsanalyse zu Standort, vorhandener Netzwerkverfügbarkeit, gewünschter Abdeckung und geplanter Anwendung, bevor wir eine maßgeschneiderte Lösung entwickeln.",
       },
       {
         title: "Individuelles Hardware-Bundle",
@@ -400,7 +400,7 @@ export const de: Dictionary = {
     },
     cta: {
       heading: "Hast du ein Digitalisierungsprojekt im Kopf?",
-      body: "Erzähl uns, woran du arbeitest — wir melden uns bei dir, um das passende Vorgehen zu besprechen.",
+      body: "Erzähl uns, woran du arbeitest.",
       emailLabel: "E-Mail",
       emailPlaceholder: "du@unternehmen.de",
       interestLabel: "Ich interessiere mich für…",
@@ -424,12 +424,12 @@ export const de: Dictionary = {
       {
         year: "Consulting",
         title: "Der Anfang",
-        body: "Das Team begann im Consulting — nah an Operatoren und Communities, ohne eigene Produkte zu bauen.",
+        body: "Das Team begann im Consulting.",
       },
       {
         year: "Helium-Mining",
         title: "Aufbau eines privaten Netzwerks",
-        body: "Der Einstieg ins Helium-Mining bedeutete den Aufbau und Betrieb eines privaten Netzwerks zum Wiederverkauf — erste Erfahrung mit einer geschlossenen, mitgliederbasierten Community.",
+        body: "Der Einstieg ins Helium-Mining bedeutete den Aufbau und Betrieb eines privaten Netzwerks zum Wiederverkauf.",
       },
       {
         year: "Die Erkenntnis",
@@ -439,7 +439,7 @@ export const de: Dictionary = {
       {
         year: "Heute",
         title: "Zugang zu Consumer Electronics",
-        body: "Aus dieser Erkenntnis wurde Advantage Networks — dasselbe Modell privater Netzwerke, angewendet auf den Zugang zu Consumer Electronics über Helium Network, Founders League und Alumni Network.",
+        body: "Aus dieser Erkenntnis wurde Advantage Networks: dasselbe Modell privater Netzwerke, jetzt angewendet auf den Zugang zu Consumer Electronics über Helium Network, Founders League und Alumni Network.",
       },
     ],
     team: {
@@ -451,7 +451,7 @@ export const de: Dictionary = {
     },
     locations: {
       eyebrow: "Wo wir sind",
-      heading: "Zuhause in München — mit Präsenz in Berlin und Düsseldorf.",
+      heading: "Zuhause in München.",
       cities: [
         { name: "München", lat: 48.14, lon: 11.58, isPrimary: true },
         { name: "Berlin", lat: 52.52, lon: 13.405 },
@@ -461,9 +461,9 @@ export const de: Dictionary = {
   },
   contactPage: {
     eyebrow: "Kontakt",
-    heading: "Marke, Community oder Mitglied — sprich mit uns.",
+    heading: "Marke, Community oder Mitglied: sprich mit uns.",
     intro:
-      "Egal ob du eine Partnerschaft prüfst, eine Community betreibst, die zum Channel werden könnte, oder bereits Mitglied eines Netzwerks bist — melde dich.",
+      "Egal ob du eine Partnerschaft prüfst, eine Community betreibst, die zum Channel werden könnte, oder bereits Mitglied eines Netzwerks bist, melde dich.",
     emailLabel: "E-Mail",
     email: "info@advantage-net.com",
     channels: [

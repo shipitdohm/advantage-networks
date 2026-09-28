@@ -73,7 +73,7 @@ export default function ConsultingPage() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Advantage Networks — Consulting${interest ? `: ${interest}` : ""}`);
+    const subject = encodeURIComponent(`Advantage Networks: Consulting${interest ? `, ${interest}` : ""}`);
     const body = encodeURIComponent(`Email: ${email}\nInterested in: ${interest}`);
     window.location.href = `mailto:${t.contactPage.email}?subject=${subject}&body=${body}`;
   };

@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Advantage Networks — ${audience}`);
+    const subject = encodeURIComponent(`Advantage Networks: ${audience}`);
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nInterested as: ${audience}\n\n${message}`
     );

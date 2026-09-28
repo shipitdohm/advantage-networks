@@ -6,7 +6,7 @@ const CONTENT = {
   en: {
     eyebrow: "Legal",
     heading: "Privacy Policy",
-    note: "Placeholder content — to be finalized and reviewed with legal counsel before launch.",
+    note: "Placeholder content, to be finalized and reviewed with legal counsel before launch.",
     sections: [
       {
         title: "1. Overview",
@@ -45,7 +45,7 @@ const CONTENT = {
   de: {
     eyebrow: "Rechtliches",
     heading: "Datenschutzerklärung",
-    note: "Platzhalter-Inhalt — vor Veröffentlichung final zu prüfen, idealerweise mit rechtlicher Beratung.",
+    note: "Platzhalter-Inhalt, vor Veröffentlichung final zu prüfen, idealerweise mit rechtlicher Beratung.",
     sections: [
       {
         title: "1. Datenschutz auf einen Blick",

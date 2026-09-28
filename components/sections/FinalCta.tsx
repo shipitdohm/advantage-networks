@@ -13,7 +13,7 @@ export function FinalCta() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Advantage Networks — ${member || form.memberPlaceholder}`);
+    const subject = encodeURIComponent(`Advantage Networks: ${member || form.memberPlaceholder}`);
     const body = encodeURIComponent(`Email: ${email}\n${form.memberLabel} ${member || "—"}`);
     window.location.href = `mailto:${t.contactPage.email}?subject=${subject}&body=${body}`;
   };

@@ -6,9 +6,9 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Advantage Networks — Exclusive access to consumer electronics through private networks",
+    title: "Advantage Networks",
     description:
-      "Advantage Networks gives members exclusive access to consumer electronics through private, invite-only networks — better deals for members, trusted partnerships for brands.",
+      "Advantage Networks gives members exclusive access to consumer electronics through private, invite-only networks.",
   },
   nav: {
     links: [
@@ -44,11 +44,11 @@ export const en: Dictionary = {
     points: [
       {
         title: "Exclusive conditions",
-        body: "Not public, not comparable. Great pricing for verified members only — made possible by direct partnerships with manufacturers.",
+        body: "Not public, not comparable. Great pricing for verified members only.",
       },
       {
         title: "Community-focused",
-        body: "Every community gets its own access, its own benefits, and its own story. Helium, Founders League, Alumni — tailored.",
+        body: "Every community gets its own access, its own benefits, and its own story.",
       },
       {
         title: "Token-native payment",
@@ -63,11 +63,11 @@ export const en: Dictionary = {
   howItWorks: {
     eyebrow: "How it works",
     heading: "Four steps to your advantage.",
-    intro: "From community membership to your first exclusive order — here's the path.",
+    intro: "From community membership to your first exclusive order.",
     steps: [
       {
         title: "Be a network member",
-        body: "Operate a Helium hotspot, belong to the Founders League, or be part of the Alumni Network — any of our partner communities opens the door to the shop.",
+        body: "Any of our partner communities opens the door to the shop.",
       },
       {
         title: "Request access",
@@ -79,7 +79,7 @@ export const en: Dictionary = {
       },
       {
         title: "Strengthen the network",
-        body: "Every purchase strengthens the ecosystem — better gear, stronger setups, a growing community.",
+        body: "Every purchase strengthens the ecosystem.",
       },
     ],
   },
@@ -112,7 +112,7 @@ export const en: Dictionary = {
     eyebrow: "The networks",
     heading: "Three networks. One kind of access.",
     intro:
-      "Each network is its own closed community with its own login-gated shop — same negotiated deals, different membership.",
+      "Each network is its own closed community with its own login-gated shop.",
     activeLabel: "Active",
     launchingLabel: "Launching",
     websiteLabel: "Visit website",
@@ -122,15 +122,15 @@ export const en: Dictionary = {
         name: "Helium Network",
         tagline: "Where it started",
         description:
-          "The original network — the largest decentralized community we serve, and the one that proved our private-access model works.",
+          "The original network: the largest decentralized community we serve, and the one that proved our private-access model works.",
         status: "Founding network",
         href: "/channels#helium-network",
         detail: {
           subheadline:
-            "The fastest-growing decentralized IoT network in the world — and the starting point of Advantage Networks. It's where hotspot operators first turned earned HNT into real hardware value, and where our private-access model was born. Today it's still our founding and largest community.",
+            "The fastest-growing decentralized IoT network in the world. It's where hotspot operators first turned earned HNT into real hardware value, and where our private-access model was born. Today it's still our founding and largest community.",
           bodyParagraphs: [
             "Helium is a decentralized IoT network operated by its community. Hotspot operators earn HNT tokens for providing network infrastructure.",
-            "With Advantage Networks, Helium operators can redeem their earned HNT directly for premium IT hardware — at exclusive member conditions.",
+            "With Advantage Networks, Helium operators can redeem their earned HNT directly for premium IT hardware.",
             "Advantage Networks started inside this community, built by and for Helium operators before expanding to Founders League and Alumni. That origin still shapes how closely we work with the network today.",
           ],
           ctaLabel: "Request Shop Access",
@@ -146,7 +146,7 @@ export const en: Dictionary = {
           ],
           embed: {
             title: "Live Helium Network Map",
-            note: "Explore live hotspot coverage on Helium World — opens in a new tab.",
+            note: "Explore live hotspot coverage on Helium World.",
             url: "https://world.helium.com/en/network/mobile",
           },
           websiteUrl: "https://www.helium.com",
@@ -164,9 +164,9 @@ export const en: Dictionary = {
           subheadline:
             "Founding is hard enough. With Advantage Networks, Founders League members get conditions only volume can unlock. We work directly with the League to bring member-only hardware pricing into the benefits founders already rely on.",
           bodyParagraphs: [
-            "Startups need the best equipment from day one — laptops, monitors, servers, networking. But without volume, they don't get enterprise-level conditions.",
-            "With Advantage Networks, every Founders League member taps into the combined purchasing power of the whole community — and gets better conditions automatically.",
-            "It's a close, ongoing partnership: as the League grows, so does the community's combined purchasing power — and the conditions get better for everyone in it.",
+            "Startups need the best equipment from day one: laptops, monitors, servers, networking. But without volume, they don't get enterprise-level conditions.",
+            "With Advantage Networks, every Founders League member taps into the combined purchasing power of the whole community.",
+            "It's a close, ongoing partnership: as the League grows, so does the community's combined purchasing power.",
           ],
           ctaLabel: "Request Partnership",
           ctaHref: "/contact",
@@ -186,17 +186,17 @@ export const en: Dictionary = {
         name: "Alumni Network",
         tagline: "Newest channel",
         description:
-          "Our newest network, extending member deals to alumni communities and their graduates. Onboarding underway.",
+          "Our newest network. It extends member deals to alumni communities and their graduates. Onboarding underway.",
         status: "Onboarding",
         href: "/channels#alumni-network",
         isLaunching: true,
         detail: {
           subheadline:
-            "Alumni membership with real value: exclusive IT conditions as a lasting, tangible benefit — for individuals and businesses. We partner directly with alumni organizations to turn membership into a benefit people actually use.",
+            "Alumni membership with real value: exclusive IT conditions as a lasting, tangible benefit for individuals and businesses. We partner directly with alumni organizations to turn membership into a benefit people actually use.",
           bodyParagraphs: [
             "Most alumni programs offer events and newsletters. That matters, but it's not enough. Advantage Networks gives alumni organizations a benefit that's relevant every single day.",
-            "Exclusive hardware conditions for individuals and businesses — for as long as they're part of the alumni network.",
-            "This is an early, hands-on partnership — we're building the model together with alumni organizations as the network grows.",
+            "Exclusive hardware conditions for individuals and businesses.",
+            "This is an early, hands-on partnership.",
           ],
           ctaLabel: "Request Partnership",
           ctaHref: "/contact",
@@ -216,7 +216,7 @@ export const en: Dictionary = {
   trackRecord: {
     eyebrow: "Track record",
     heading: "What's already happened inside the networks.",
-    intro: "A first entry — this list grows as more networks and brands come online.",
+    intro: "This list grows as more networks and brands come online.",
     caseStudies: [
       {
         partner: "Garmin",
@@ -243,7 +243,7 @@ export const en: Dictionary = {
   whyNow: {
     eyebrow: "Why this matters now",
     heading: "Public price comparison broke retail margins. Private networks fix the incentive.",
-    body: "When every price is public, brands compete on discount, not relationship. Private, curated networks let brands protect pricing while still moving real volume — and let members enjoy exclusive, attractive deals.",
+    body: "When every price is public, brands compete on discount, not relationship. Private, curated networks let brands protect pricing while still moving real volume.",
     points: [
       {
         title: "Retail margin is under permanent pressure",
@@ -251,11 +251,11 @@ export const en: Dictionary = {
       },
       {
         title: "Communities are already how people get access",
-        body: "People already trust and buy through the networks they're part of — we formalize that as a channel.",
+        body: "People already trust and buy through the networks they're part of.",
       },
       {
         title: "Decentralized origin, commercial application",
-        body: "The model started in the Helium Network's decentralized community structure — now applied to consumer electronics.",
+        body: "The model started in the Helium Network's decentralized community structure. It's now applied to consumer electronics.",
       },
     ],
   },
@@ -309,7 +309,7 @@ export const en: Dictionary = {
   shopPage: {
     eyebrow: "Coming soon",
     heading: "The shop is being built.",
-    body: "Advantage Networks' login-gated shop is in development. Members of a private network will sign in here to access exclusive pricing — for now, this is a placeholder.",
+    body: "Advantage Networks' login-gated shop is in development. Members of a private network will sign in here to access exclusive pricing.",
     backLabel: "Back to home",
   },
   notFoundPage: {
@@ -343,7 +343,7 @@ export const en: Dictionary = {
     galleryTitle: "Impressions",
     cta: {
       heading: "An activation for your network or brand?",
-      body: "We build events like this together with communities and brands — close to the members, without a public listing.",
+      body: "We build events like this together with communities and brands.",
       button: "Get in touch",
     },
     sound: { on: "Sound on", off: "Sound off" },
@@ -352,12 +352,12 @@ export const en: Dictionary = {
     eyebrow: "Consulting",
     heading: "We help organizations navigate digital transformation.",
     intro:
-      "Beyond the networks we run ourselves, we consult on and deploy decentralized network infrastructure directly for organizations — needs assessment through to ongoing support.",
-    note: "These are client-confidential engagements — shown here by service type, not by name.",
+      "Beyond the networks we run ourselves, we consult on and deploy decentralized network infrastructure directly for organizations.",
+    note: "These are client-confidential engagements, shown here by service type, not by name.",
     services: [
       {
         title: "Needs assessment & consulting",
-        body: "We start with a thorough needs assessment — location, existing network availability, target coverage, and intended use — before designing a tailored solution.",
+        body: "We start with a thorough needs assessment covering location, existing network availability, target coverage, and intended use, before designing a tailored solution.",
       },
       {
         title: "Custom hardware bundle",
@@ -400,7 +400,7 @@ export const en: Dictionary = {
     },
     cta: {
       heading: "Have a digital transformation project in mind?",
-      body: "Tell us what you're working on — we'll get back to you to talk through the right engagement.",
+      body: "Tell us what you're working on.",
       emailLabel: "Email",
       emailPlaceholder: "you@company.com",
       interestLabel: "I'm interested in…",
@@ -424,12 +424,12 @@ export const en: Dictionary = {
       {
         year: "Consulting",
         title: "Where it started",
-        body: "The team began in consulting — working close to operators and communities, not building products of its own.",
+        body: "The team began in consulting.",
       },
       {
         year: "Helium mining",
         title: "Building a private network",
-        body: "A move into Helium mining meant building and operating a private network for resale — first-hand experience running a closed, member-based community.",
+        body: "A move into Helium mining meant building and operating a private network for resale.",
       },
       {
         year: "The insight",
@@ -439,7 +439,7 @@ export const en: Dictionary = {
       {
         year: "Today",
         title: "Consumer electronics access",
-        body: "That insight became Advantage Networks — applying the same private-network model to consumer electronics access through the Helium Network, Founders League, and Alumni Network.",
+        body: "That insight became Advantage Networks: applying the same private-network model to consumer electronics access through the Helium Network, Founders League, and Alumni Network.",
       },
     ],
     team: {
@@ -461,9 +461,9 @@ export const en: Dictionary = {
   },
   contactPage: {
     eyebrow: "Contact",
-    heading: "Brand, community, or member — let's talk.",
+    heading: "Brand, community, or member: let's talk.",
     intro:
-      "Whether you're exploring a partnership, running a community that could become a channel, or you're already a network member with a question — reach out.",
+      "Whether you're exploring a partnership, running a community that could become a channel, or you're already a network member with a question, reach out.",
     emailLabel: "Email",
     email: "info@advantage-net.com",
     channels: [

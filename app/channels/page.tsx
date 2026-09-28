@@ -27,7 +27,7 @@ export default function ChannelsPage() {
       </section>
 
       <section className="pb-20 md:pb-28">
-        <div className="container-content flex flex-col gap-20 md:gap-28">
+        <div className="container-content flex flex-col gap-28 md:gap-40">
           {t.networks.items.map((network, i) => (
             <ChannelSection key={network.slug} network={network} delayMs={i * 90} />
           ))}

@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import type { NetworkItem } from "@/lib/content/types";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
-import { Typewriter } from "@/components/Typewriter";
 import { MetaCell } from "@/components/MetaCell";
 
 const NUMERIC_STAT = /^(\d+)(?:([.,])(\d+))?([%+]?)$/;
@@ -15,7 +13,10 @@ const NUMERIC_STAT = /^(\d+)(?:([.,])(\d+))?([%+]?)$/;
 // client-side avoids a broken-image flash on the initial static-export HTML,
 // since <img onError> fires before React hydrates and attaches the handler.
 // Plain white mark, same treatment as the partner/network logos on the
-// Events page — no per-brand color tint or glow behind it.
+// Events page — no per-brand color tint or glow behind it. Renders nothing
+// at all (not a reserved-space placeholder) while unresolved, so a network
+// that has no logo yet — like Alumni — doesn't leave a gap pushing its
+// status pill out of left alignment.
 function ChannelLogo({ slug, name }: { slug: string; name: string }) {
   const [loaded, setLoaded] = useState(false);
   const src = `/brand/channels/${slug}.svg`;
@@ -27,7 +28,7 @@ function ChannelLogo({ slug, name }: { slug: string; name: string }) {
     img.src = src;
   }, [src]);
 
-  if (!loaded) return <span className="block h-8 w-[150px]" aria-hidden="true" />;
+  if (!loaded) return null;
 
   return (
     // eslint-disable-next-line @next/next/no-img-element -- brand logo, no optimization needed
@@ -40,9 +41,14 @@ function ChannelLogo({ slug, name }: { slug: string; name: string }) {
   );
 }
 
-function StatValue({ value, startDelayMs }: { value: string; startDelayMs: number }) {
+// Numeric values still count up; word values render as plain, static text.
+// They used to type letter by letter, but that let the cell's line count
+// flip between one and two lines mid-animation (whichever cell happened to
+// wrap at that instant), nudging the whole grid — the "verschieben sich ein
+// bisschen" the layout used to do while it loaded.
+function StatValue({ value }: { value: string }) {
   const match = value.match(NUMERIC_STAT);
-  if (!match) return <Typewriter text={value} startDelayMs={startDelayMs} />;
+  if (!match) return <>{value}</>;
 
   const [, intPart, sep, fracPart, suffix] = match;
   const decimals = fracPart ? fracPart.length : 0;
@@ -60,8 +66,6 @@ function StatValue({ value, startDelayMs }: { value: string; startDelayMs: numbe
 export function ChannelSection({ network, delayMs }: { network: NetworkItem; delayMs: number }) {
   const { t } = useLanguage();
   const d = network.detail;
-  const statsTitleDelay = 250;
-  const statsRowStagger = 130;
 
   return (
     <Reveal
@@ -99,10 +103,6 @@ export function ChannelSection({ network, delayMs }: { network: NetworkItem; del
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">{d.subheadline}</p>
 
-          <Link href={d.ctaHref} className="btn-secondary mt-8 inline-flex">
-            {d.ctaLabel}
-          </Link>
-
           {d.embed && (
             <a
               href={d.embed.url}
@@ -125,22 +125,19 @@ export function ChannelSection({ network, delayMs }: { network: NetworkItem; del
 
         {/* flex + flex-grow (not a fixed-column grid) so a trailing partial
             row — e.g. 5 stats — stretches to fill the width instead of
-            leaving an empty cell. */}
+            leaving an empty cell. Each cell fades in on its own (opacity/
+            transform only, text already at full size) instead of typing
+            its text out, so nothing changes line count mid-animation. */}
         <div className="flex flex-wrap gap-px overflow-hidden rounded-card border border-border-strong bg-border">
-          {d.stats.map((stat, i) => {
-            const rowDelay = statsTitleDelay + i * statsRowStagger;
-            return (
-              <MetaCell
-                key={stat.label}
-                className="min-w-[45%] flex-1"
-                label={<Typewriter text={stat.label} startDelayMs={rowDelay} />}
-              >
+          {d.stats.map((stat, i) => (
+            <Reveal key={stat.label} delayMs={i * 70} className="min-w-[45%] flex-1">
+              <MetaCell label={stat.label} className="h-full">
                 <span className="font-display text-lg font-medium text-fg">
-                  <StatValue value={stat.value} startDelayMs={rowDelay + stat.label.length * 22 + 80} />
+                  <StatValue value={stat.value} />
                 </span>
               </MetaCell>
-            );
-          })}
+            </Reveal>
+          ))}
         </div>
       </div>
     </Reveal>
