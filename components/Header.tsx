@@ -77,7 +77,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="container-content pt-3 md:pt-4">
       <div
-        className={`relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 transition-[background,box-shadow] duration-300 md:h-14 md:pl-6 md:pr-1.5 ${
+        className={`relative flex h-12 items-center justify-between rounded-pill pl-4 pr-1.5 transition-shadow duration-300 md:h-14 md:pl-6 md:pr-1.5 ${
           scrolled ? "header-scrolled" : ""
         }`}
       >

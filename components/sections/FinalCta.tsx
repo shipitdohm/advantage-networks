@@ -12,12 +12,12 @@ export function FinalCta() {
     <section id="access" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32" data-od-id="final-cta">
       <div className="container-content relative">
         <Reveal className="mx-auto max-w-xl text-center">
-          <h2 className="mx-auto max-w-2xl font-display text-4xl font-medium leading-[1.1] tracking-[-0.02em] text-fg md:text-5xl">
+          <h2 className="mx-auto max-w-2xl font-display text-3xl font-medium leading-[1.15] tracking-[-0.01em] text-fg md:text-4xl">
             {t.finalCta.heading}
           </h2>
         </Reveal>
 
-        <Reveal delayMs={100} className="mx-auto mt-10 max-w-3xl">
+        <Reveal delayMs={100} className="mx-auto mt-14 max-w-3xl md:mt-16">
           <form
             onSubmit={(e) => e.preventDefault()}
             className="card flex flex-col gap-4 p-6 md:flex-row md:items-end md:gap-3 md:p-4"
@@ -37,20 +37,32 @@ export function FinalCta() {
               <label htmlFor="cta-member" className="text-xs text-muted">
                 {form.memberLabel}
               </label>
-              <select
-                id="cta-member"
-                defaultValue=""
-                className="mt-1.5 w-full rounded-lg border border-border-strong bg-surface px-4 py-2.5 text-sm text-fg focus:border-accent focus:outline-none"
-              >
-                <option value="" disabled>
-                  {form.memberPlaceholder}
-                </option>
-                {form.memberOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
+              <div className="relative mt-1.5">
+                <select
+                  id="cta-member"
+                  defaultValue=""
+                  className="w-full appearance-none rounded-lg border border-border-strong bg-surface px-4 py-2.5 pr-9 text-sm text-fg focus:border-accent focus:outline-none"
+                >
+                  <option value="" disabled>
+                    {form.memberPlaceholder}
                   </option>
-                ))}
-              </select>
+                  {form.memberOptions.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-muted"
+                >
+                  <path d="M2 3.5l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
             </div>
             <button type="submit" className="btn-primary justify-center whitespace-nowrap md:flex-none">
               {form.submitLabel}

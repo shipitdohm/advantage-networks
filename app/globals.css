@@ -110,15 +110,11 @@ body {
     transform: translateY(0);
   }
 
-  /* The header itself has no background — but once page content is
-     scrolling underneath it, plain text-on-text is illegible. A light
-     blur plus a soft shadow is enough to separate the two without turning
-     the nav back into a visible panel. */
+  /* The header has no fill or blur at all — just a soft dark shadow once
+     scrolled, enough to lift it off the page without turning it back into
+     a visible panel. */
   .header-scrolled {
-    background: oklch(13% 0.014 260 / 45%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.65);
   }
 
   /* Apple "Liquid Glass"-inspired material. Per Apple's own HIG reference
