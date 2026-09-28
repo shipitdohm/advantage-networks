@@ -32,7 +32,7 @@ export const en: Dictionary = {
     stats: [
       { target: 100, suffix: "+", label: "Successful activations" },
       { target: 500, suffix: "+", label: "Own network nodes" },
-      { target: 3, suffix: "+", label: "Partner communities", startValue: 9 },
+      { target: 3, suffix: "+", label: "Partner communities", startValue: 100 },
       { target: 1000, suffix: "+", label: "Products in range", formatThousands: true },
     ],
   },

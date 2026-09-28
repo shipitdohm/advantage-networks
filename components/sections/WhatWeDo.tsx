@@ -57,7 +57,7 @@ export function WhatWeDo() {
           {t.whatWeDo.points.map((point, i) => {
             const icon = ICON_META[i % ICON_META.length];
             return (
-              <Reveal key={point.title} delayMs={i * 150} className="bg-surface">
+              <Reveal key={point.title} delayMs={i * 150} className="bg-bg">
                 <div
                   className="group h-full p-8 transition-colors duration-300"
                   style={{ "--item-color": icon.color } as React.CSSProperties}
