@@ -1,23 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
-import { ChannelAccordionCard } from "@/components/ChannelAccordionCard";
+import { ChannelSection } from "@/components/ChannelSection";
 
 export default function ChannelsPage() {
   const { t } = useLanguage();
-  const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
 
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (!hash) return;
-    const match = t.networks.items.find((n) => n.slug === hash);
-    if (!match) return;
-    setExpandedSlug(hash);
     document.getElementById(hash)?.scrollIntoView({ block: "start" });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once on mount, react to the URL only
   }, []);
 
   return (
@@ -31,18 +26,10 @@ export default function ChannelsPage() {
         </div>
       </section>
 
-      <section className="pb-32 md:pb-44">
-        <div className="container-content flex flex-col divide-y divide-border">
+      <section className="pb-28 md:pb-36">
+        <div className="container-content flex flex-col">
           {t.networks.items.map((network, i) => (
-            <ChannelAccordionCard
-              key={network.slug}
-              network={network}
-              delayMs={i * 90}
-              expanded={expandedSlug === network.slug}
-              onToggle={() =>
-                setExpandedSlug((prev) => (prev === network.slug ? null : network.slug))
-              }
-            />
+            <ChannelSection key={network.slug} network={network} delayMs={i * 90} />
           ))}
         </div>
 

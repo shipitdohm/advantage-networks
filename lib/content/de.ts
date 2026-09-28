@@ -116,8 +116,6 @@ export const de: Dictionary = {
     activeLabel: "Aktiv",
     launchingLabel: "Startet bald",
     websiteLabel: "Website besuchen",
-    expandLabel: "Details anzeigen",
-    collapseLabel: "Details ausblenden",
     items: [
       {
         slug: "helium-network",
@@ -127,8 +125,6 @@ export const de: Dictionary = {
           "Das ursprüngliche Netzwerk — die größte dezentrale Community, die wir bedienen, und die, die unser Modell des privaten Zugangs bewiesen hat.",
         status: "Gründungsnetzwerk",
         href: "/channels#helium-network",
-        accentColor: "#5E25FD",
-        cardAbbr: "HNT",
         detail: {
           subheadline:
             "Das schnellstwachsende dezentrale IoT-Netzwerk der Welt – und der Ausgangspunkt von Advantage Networks. Hier haben Hotspot-Betreiber zum ersten Mal verdiente HNT in echten Hardware-Wert verwandelt, und hier ist unser Modell des privaten Zugangs entstanden. Bis heute ist es unsere größte und ursprüngliche Community.",
@@ -164,8 +160,6 @@ export const de: Dictionary = {
           "Ein kuratiertes Netzwerk aus Foundern und Operatoren. Heimat von Aktionen wie dem Founder Padel Treff, unterstützt mit Garmin.",
         status: "Aktiv",
         href: "/channels#founders-league",
-        accentColor: "#FF7D23",
-        cardAbbr: "FL",
         detail: {
           subheadline:
             "Gründen ist hart genug. Mit Advantage Networks bekommen Founders League Members Konditionen, die nur mit Volumen erreichbar sind. Wir arbeiten direkt mit der League zusammen, um Hardware-Konditionen für Members in die Benefits einzubauen, auf die Founder ohnehin schon zählen.",
@@ -195,8 +189,6 @@ export const de: Dictionary = {
           "Unser neuestes Netzwerk — erweitert Mitgliederkonditionen auf Alumni-Communities und deren Absolventen. Onboarding läuft.",
         status: "Im Aufbau",
         href: "/channels#alumni-network",
-        accentColor: "#f5a623",
-        cardAbbr: "ALU",
         isLaunching: true,
         detail: {
           subheadline:

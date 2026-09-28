@@ -56,8 +56,6 @@ export interface NetworkItem {
   description: string;
   status: string;
   href: string;
-  accentColor: string;
-  cardAbbr: string;
   isLaunching?: boolean;
   detail: NetworkDetail;
 }
@@ -131,8 +129,6 @@ export interface Dictionary {
     activeLabel: string;
     launchingLabel: string;
     websiteLabel: string;
-    expandLabel: string;
-    collapseLabel: string;
   };
   trackRecord: {
     eyebrow: string;

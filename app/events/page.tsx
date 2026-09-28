@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
+import { MetaCell } from "@/components/MetaCell";
 import { HeroVideo } from "@/components/events/HeroVideo";
 import { PhotoMarquee } from "@/components/events/PhotoMarquee";
 import { FPT_PHOTOS, FPT_POSTER, FPT_VIDEO } from "@/lib/events/founderPadelTreff";
@@ -35,15 +36,6 @@ function SafeLogo({ src, name, className }: { src: string; name: string; classNa
       className={`w-auto object-contain object-left ${className}`}
       style={{ filter: "brightness(0) invert(1)" }}
     />
-  );
-}
-
-function MetaCell({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <div className="flex flex-col justify-between gap-5 bg-surface px-5 py-5 md:px-6">
-      <span className="text-[10px] font-medium uppercase tracking-[0.12em] text-muted opacity-60">{label}</span>
-      <div className="flex min-h-[44px] items-end">{children}</div>
-    </div>
   );
 }
 

@@ -116,8 +116,6 @@ export const en: Dictionary = {
     activeLabel: "Active",
     launchingLabel: "Launching",
     websiteLabel: "Visit website",
-    expandLabel: "Show details",
-    collapseLabel: "Hide details",
     items: [
       {
         slug: "helium-network",
@@ -127,8 +125,6 @@ export const en: Dictionary = {
           "The original network — the largest decentralized community we serve, and the one that proved our private-access model works.",
         status: "Founding network",
         href: "/channels#helium-network",
-        accentColor: "#5E25FD",
-        cardAbbr: "HNT",
         detail: {
           subheadline:
             "The fastest-growing decentralized IoT network in the world — and the starting point of Advantage Networks. It's where hotspot operators first turned earned HNT into real hardware value, and where our private-access model was born. Today it's still our founding and largest community.",
@@ -164,8 +160,6 @@ export const en: Dictionary = {
           "A curated network of founders and operators. Home to activations like the Founder Padel Treff, sponsored with Garmin.",
         status: "Active",
         href: "/channels#founders-league",
-        accentColor: "#FF7D23",
-        cardAbbr: "FL",
         detail: {
           subheadline:
             "Founding is hard enough. With Advantage Networks, Founders League members get conditions only volume can unlock. We work directly with the League to bring member-only hardware pricing into the benefits founders already rely on.",
@@ -195,8 +189,6 @@ export const en: Dictionary = {
           "Our newest network, extending member deals to alumni communities and their graduates. Onboarding underway.",
         status: "Onboarding",
         href: "/channels#alumni-network",
-        accentColor: "#f5a623",
-        cardAbbr: "ALU",
         isLaunching: true,
         detail: {
           subheadline:
